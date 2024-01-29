@@ -1,4 +1,5 @@
 @import url(/CV/src/fonts/fonts.css);
+@import url(/CV/src/animations/animations.css);
 
 /* Standart Reset Styles */
 
@@ -16,16 +17,341 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
     padding: 0;
     line-height: 1.3;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 p {
-    margin: 0 0 1rem;
+    margin: 0;
     line-height: 1.6;
 }
 
 body{
     margin: 0;
-    background-color: #f1f1ef;
+    background-color: #313340;
     font-family: 'Montserrat', sans-serif;
 }
+
+html, body, .awards__card {
+    height: 100%;
+}
+
+/* Grid */
+
+.canvas {
+    max-width: 110rem;
+    margin: 5rem auto;
+    background-color: #f1f1f1;
+    box-shadow: -1.4rem 1.4rem 2.8rem rgba(0,0,0,0.25), -1rem 1rem 1rem rgba(0,0,0,0.22);
+    border-radius: 0.1rem;
+}
+
+/* Header */
+
+.header {
+    display: flex;
+    align-items: center;
+    padding: 5.5rem 0 2.5rem;
+}
+
+.photo {
+    display: flex;
+    justify-content: center;
+    width: 30%;
+}
+
+.photo img {
+    max-width: 18rem;
+    height: auto;
+    border-radius: 50%
+}
+
+.header__text  {
+    width: 70%;
+    margin-left: 2rem;
+
+    font-family: "Comfortaa", sans-serif;
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.6rem;
+}
+
+.first-name, .last-name {
+    display: block;
+}
+
+.first-name {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 100;
+    line-height: 1.1;
+}
+
+.last-name {
+    position: relative;
+    left: 1px;
+    font-weight: 700;
+}
+
+.last-name::after {
+    content: "";
+    width: 75%;
+    height: 1px;
+    position: absolute;
+    left: 4px;
+    bottom: 0;
+    background: #000;
+}
+
+.professional-title {
+    position: relative;
+    left: 7px;
+    font-size: 1.9rem;
+    font-weight: 100;
+    margin-top: 1.2rem;
+}
+
+/* Info */
+
+.info {
+    display: flex;
+}
+
+/* Short Info */
+
+.short-info {
+    width: 30%;
+    padding: 2rem;
+}
+
+.short-info__title {
+    text-align: center;
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Contacts */
+
+.contacts__content {
+    margin-top: 1rem;
+    font-size: 1.6rem;
+    font-style: normal;
+}
+
+.contacts__item {
+    display: flex;
+    max-width: 29rem;
+    margin-top: 0.5rem;
+}
+
+.contacts__item-title {
+    width: 29%;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.contacts__item-text {
+    position: relative;
+    margin-left: 0.5rem;
+    width: 70%;
+    line-height: 1.2;
+    overflow-wrap: break-word;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    color: #000;
+    transition: text-decoration-color 0.3s;
+}
+
+.contacts__item-text:hover {
+    text-decoration-color: #000;
+}
+
+.contacts__item-text::after {
+    content: "";
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    z-index: 1;
+
+    opacity: 0;
+
+    transition: opacity 0.3s;
+}
+
+.contacts__item-text:hover::after {
+    opacity: 1;
+}
+
+.contacts__item-text_address::after {
+    top: 1rem;
+    right: -1rem;
+    background: url(/CV/src/icons/map-pin.png) no-repeat;
+}
+
+.contacts__item-text_email::after {
+    top: 1.2rem;
+    right: -1.2rem;
+    background: url(/CV/src/icons/email.png) no-repeat;
+}
+
+.contacts__item-text_telegram::after {
+    top: 0.3rem;
+    right: 1rem;
+    background: url(/CV/src/icons/telegram.png) no-repeat;
+}
+
+.contacts__item-text_linkedin::after {
+    top: 0.2rem;
+    right: 0.5rem;
+    background: url(/CV/src/icons/linkedin.png) no-repeat;
+}
+
+.contacts__item-text_github::after {
+    top: 0.1rem;
+    right: 3rem;
+    background: url(/CV/src/icons/github.png) no-repeat;
+}
+
+/* Skills */
+
+.skills {
+    margin-top: 2rem;
+}
+
+.skills__content {
+    margin-top: 1rem;
+    list-style-type: none;
+}
+
+.skills__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.9rem;
+}
+
+.skills__item::before, .skills__item::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1rem;
+    height: 4px;
+}
+
+.skills__item::before {
+    width: 100%;
+    background: #dadada;
+}
+
+.skills__item::after {
+    background: #000;
+}
+
+.skills__item_html5::after {
+    animation: animateSkillsHtml5 0.5s ease-out 1 normal forwards;
+}
+
+.skills__item_css3::after {
+    animation: animateSkillsCss3 0.5s ease-out 1 normal forwards;
+}
+
+.skills__item_js::after {
+    animation: animateSkillsJs 0.5s ease-out 1 normal forwards;
+}
+
+.skills__item_ts::after {
+    animation: animateSkillsTs 0.5s ease-out 1 normal forwards;
+}
+
+.skills__item_git::after {
+    animation: animateSkillsGit 0.5s ease-out 1 normal forwards;
+}
+
+.skills__item_basic::after {
+    animation: animateSkillsBasic 0.5s ease-out 1 normal forwards;
+}
+
+.skills__item_ps::after {
+    animation: animateSkillsPs 0.5s ease-out 1 normal forwards;
+}
+
+.skills__img {
+    display: inline-block;
+    width: 2.8rem;
+    height: auto;
+}
+
+.skills__text {
+    margin-left: 0.5rem;
+    font-size: 1.5rem;
+}
+
+/* Awards */
+
+.awards {
+    margin-top: 3rem;
+}
+
+.awards__content {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.awards__card {
+    margin: 0.4rem 0.4rem 0.8rem 0;
+    display: flex;
+    justify-content: center;
+    width: 45%;
+}
+
+.awards__link {
+    position: relative;
+    display: block;
+    width: 11.3rem;
+    height: 8rem;
+}
+
+.awards__img-bw {
+    max-width: 100%;
+    height: auto;
+    opacity: 1;
+
+    will-change: transform;
+    transition: all 0.3s ease-out;
+}
+
+.awards__img-color {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    height: auto;
+    opacity: 0;
+
+    will-change: transform;
+    transition: all 0.3s ease-out;
+}
+
+.awards__link:hover .awards__img-bw {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    transform: scale(1.3);
+    opacity: 0;
+}
+
+.awards__link:hover .awards__img-color {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    transform: scale(1.3);
+    opacity: 1;
+    z-index: 1;
+}
+
+
+/* Detailed Info */
+
+.detailed-info {
+    width: 70%;
+    height: 30rem;
+}
+

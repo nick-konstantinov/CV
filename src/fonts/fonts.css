@@ -78,3 +78,47 @@
     font-weight: 400;
     font-style: italic;
 }
+
+/* Poppins */
+
+@font-face {
+    font-family: "Poppins";
+    src: url(/CV/src/fonts/Poppins/Poppins-Thin.ttf) format("truetype");
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url(/CV/src/fonts/Poppins/Poppins-Light.ttf) format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url(/CV/src/fonts/Poppins/Poppins-Regular.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url(/CV/src/fonts/Poppins/Poppins-Medium.ttf) format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url(/CV/src/fonts/Poppins/Poppins-Bold.ttf) format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url(/CV/src/fonts/Poppins/Poppins-Italic.ttf) format("truetype");
+    font-weight: 400;
+    font-style: italic;
+}
