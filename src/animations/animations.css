@@ -2,6 +2,8 @@
 
 /* Keyframes */
 
+/* Hard Skills */
+
 @keyframes animateSkillsHtml5 {
     from {width: 0;}
     to {width: var(--skills-css3);}
@@ -22,14 +24,36 @@
     to {width: var(--skills-ts)}
 }
 
-@keyframes animateSkillsGit{
+@keyframes animateSkillsAngular{
     from {width: 0;}
-    to {width: var(--skills-git)}
+    to {width: var(--skills-angular)}
 }
+
+@keyframes animateSkillsWebpack{
+    from {width: 0;}
+    to {width: var(--skills-webpack)}
+}
+
+/* Soft Skills */
 
 @keyframes animateSkillsBasic{
     from {width: 0;}
     to {width: var(--skills-basic)}
+}
+
+@keyframes animateSkillsAgile{
+    from {width: 0;}
+    to {width: var(--skills-agile)}
+}
+
+@keyframes animateSkillsHttp{
+    from {width: 0;}
+    to {width: var(--skills-http)}
+}
+
+@keyframes animateSkillsGit{
+    from {width: 0;}
+    to {width: var(--skills-git)}
 }
 
 @keyframes animateSkillsPs{

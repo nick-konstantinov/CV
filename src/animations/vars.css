@@ -1,9 +1,15 @@
 :root {
+    /* Hard skills */
     --skills-html5: 95%;
     --skills-css3: 95%;
     --skills-js: 85%;
-    --skills-ts: 75%;
+    --skills-ts: 70%;
+    --skills-angular: 50%;
+    --skills-webpack: 75%;
+    /* Soft skills */
+    --skills-basic: 90%;
+    --skills-agile: 90%;
+    --skills-http: 75%;
     --skills-git: 90%;
-    --skills-basic: 70%;
     --skills-ps: 85%;
 }
