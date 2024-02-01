@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="image/x-icon" href="/CV/src/icons/favicon.ico" rel="shortcut icon">
     <link rel="stylesheet" href="style.css">
+    <script defer src="lang.js"></script>
     <title>CV Mikita Kanstantsinau</title>
 </head>
 <body>
@@ -16,22 +17,26 @@
             </div>
             <div class="header__text">
                 <h1 class="name-title">
-                    <span class="first-name">Mikita</span>
-                    <span class="last-name">Kanstantsinau</span>
+                    <span class="first-name" data-lang="first-name">Mikita</span>
+                    <span class="last-name"  data-lang="last-name">Kanstantsinau</span>
                 </h1>
-                <h4 class="professional-title">Software Development Engineer</h4>
+                <h4 class="professional-title" data-lang="professional-title">Software Development Engineer</h4>
             </div>
+            <nav class="lang-menu">
+                <button class="lang-btn" type="button" data-btn="en">En</button>
+                <button class="lang-btn" type="button" data-btn="ru">Ru</button>
+            </nav>
         </header>
         <!-- Info -->
         <main class="info">
             <section class="short-info">
                 <!-- Contacts -->
                 <article class="contacts">
-                    <h3 class="info__title contacts__title">Contacts</h3>
+                    <h3 class="info__title contacts__title" data-lang="contacts__title">Contacts</h3>
                     <address class="contacts__content">
                         <div class="contacts__item">
-                            <p class="contacts__item-title">Address:</p>
-                            <a class="contacts__item-text contacts__item-text_address" href="https://maps.app.goo.gl/7D56cp5SSvFk8hJo9" target="_blank">Sulaberidze st., Batumi, Georgia</a>
+                            <p class="contacts__item-title" data-lang="address__title">Address:</p>
+                            <a class="contacts__item-text contacts__item-text_address" data-lang="address__text" href="https://maps.app.goo.gl/7D56cp5SSvFk8hJo9" target="_blank">Sulaberidze st., Batumi, Georgia</a>
                         </div>
                         <div class="contacts__item">
                             <p class="contacts__item-title">Email:</p>
@@ -53,7 +58,7 @@
                 </article>
                 <!-- Skills -->
                 <article class="skills">
-                    <h3 class="info__title hard-skill__title">Hard skills</h3>
+                    <h3 class="info__title hard-skill__title" data-lang="hard-skill__title">Hard skills</h3>
                     <ul class="skills__content">
                         <li class="skills__item skills__item_html5">
                             <img class="skills__img" src="/CV/src/icons/html5.png" alt="">
@@ -65,7 +70,7 @@
                         </li>
                         <li class="skills__item skills__item_js">
                             <img class="skills__img" src="/CV/src/icons/js.png" alt="">
-                            <p class="skills__text">Core JS and Client-Side JS</p>
+                            <p class="skills__text" data-lang="hard-skill__js">JavaScript</p>
                         </li>
                         <li class="skills__item skills__item_ts">
                             <img class="skills__img" src="/CV/src/icons/ts.png" alt="">
@@ -73,14 +78,14 @@
                         </li>
                         <li class="skills__item skills__item_angular">
                             <img class="skills__img" src="/CV/src/icons/angular.png" alt="">
-                            <p class="skills__text">Angular (basic knowledge)</p>
+                            <p class="skills__text" data-lang="hard-skill__angular">Angular (basic knowledge)</p>
                         </li>
                         <li class="skills__item skills__item_webpack">
                             <img class="skills__img" src="/CV/src/icons/webpack.png" alt="">
                             <p class="skills__text">Webpack</p>
                         </li>
                     </ul>
-                    <h3 class="info__title soft-skill__title">Soft skills</h3>
+                    <h3 class="info__title soft-skill__title" data-lang="soft-skill__title">Soft skills</h3>
                     <ul class="skills__content">
                         <li class="skills__item skills__item_basic">
                             <img class="skills__img" src="/CV/src/icons/basic.png" alt="">
@@ -96,41 +101,41 @@
                         </li>
                         <li class="skills__item skills__item_git">
                             <img class="skills__img" src="/CV/src/icons/git-logo.png" alt="">
-                            <p class="skills__text">Version control (Git)</p>
+                            <p class="skills__text" data-lang="soft-skill__git">Version control (Git)</p>
                         </li>
                         <li class="skills__item skills__item_ps">
                             <img class="skills__img" src="/CV/src/icons/ps.png" alt="">
-                            <p class="skills__text">Graphics editors (Ps, Figma)</p>
+                            <p class="skills__text" data-lang="soft-skill__ps">Graphics editors (Ps, Figma)</p>
                         </li>
                     </ul>
                 </article>
                 <!-- Languages -->
                 <article class="languages">
-                    <h3 class="info__title">Languages</h3>
+                    <h3 class="info__title" data-lang="languages-title">Languages</h3>
                     <ul class="skills__content languages__content">
                         <li class="languages__item">
                             <div class="languages__name">
                                 <div class="languages__img">
                                     <img src="/CV/src/icons/lang.png" alt="">
                                 </div>
-                                <p class="languages__name-title">English:</p>
+                                <p class="languages__name-title" data-lang="languages-text__en-title">English:</p>
                             </div>
-                            <p class="languages__level">A2 (Pre-Intermediate)</p>
+                            <p class="languages__level" data-lang="languages-text__en-level">A2 (Pre-Intermediate)</p>
                         </li>
                         <li class="languages__item">
                             <div class="languages__name">
                                 <div class="languages__img">
                                     <img src="/CV/src/icons/lang.png" alt="">
                                 </div>
-                                <p class="languages__name-title">Russian:</p>
+                                <p class="languages__name-title" data-lang="languages-text__ru-title">Russian:</p>
                             </div>
-                            <p class="languages__level">Native</p>
+                            <p class="languages__level" data-lang="languages-text__ru-level">Native</p>
                         </li>
                     </ul>
                 </article>
                 <!-- Awards -->
                 <article class="awards">
-                    <h3 class="info__title">Awards</h3>
+                    <h3 class="info__title" data-lang="awards-title">Awards</h3>
                     <div class="awards__content">
                         <div class="awards__card">
                             <a class="awards__link" href="https://www.sololearn.com/certificates/CT-7WB4YVRY" target="_blank">
@@ -157,40 +162,43 @@
             <section class="detailed-info">
                 <!-- Profile -->
                 <article class="profile">
-                    <h3 class="info__title detailed__title">Profile</h3>
-                    <p class="profile__text">
-                        Hello, I&#180;m software development engineer. I&#180;m interested animating static artist or designer templates to life. And also, I like to create convenient and interactive interfaces for websites and applications. Many years of experience as a teacher allowed me to develop communication skills and the ability to clearly convey my thoughts and ideas, and my experience as an engineer allowed me to find effective solutions to complex problems. As a chief engineer, I successfully led a team of specialists, distributing tasks and responsibilities. My strengths are: the ability to work in a team, involvement in the process of working on a project and the ability to put myself in the shoes of the customer or end user in order to improve the product I create.
+                    <h3 class="info__title detailed__title" data-lang="profile-title">Profile</h3>
+                    <p class="profile__text" data-lang="profile-text-path1">
+                        Hello, I&#180;m software development engineer. I&#180;m interested animating static artist or designer templates to life. And also, I like to create convenient and interactive interfaces for websites and applications.
                     </p>
-                    <p class="profile__text">
+                    <p class="profile__text" data-lang="profile-text-path2">
+                        Many years of experience as a teacher allowed me to develop communication skills and the ability to clearly convey my thoughts and ideas, and my experience as an engineer allowed me to find effective solutions to complex problems. As a chief engineer, I successfully led a team of specialists, distributing tasks and responsibilities. My strengths are: the ability to work in a team, involvement in the process of working on a project and the ability to put myself in the shoes of the customer or end user in order to improve the product I create.
+                    </p>
+                    <p class="profile__text" data-lang="profile-text-path3">
                         At the moment, my goal is to become a successful frontend developer who can handle complex tasks on different projects. To do this, I continue studying hard and every day I either learn something new and hone knowledge in practice.
                     </p>
                 </article>
                 <!-- Education -->
                 <article class="education">
-                    <h3 class="info__title detailed__title">Education</h3>
+                    <h3 class="info__title detailed__title" data-lang="education__title">Education</h3>
                     <section class="education__content">
                         <section class="education__higher">
-                            <h4 class="education__content-title">Higher education</h4>
+                            <h4 class="education__content-title" data-lang="education__subtitle-higher">Higher education</h4>
                             <section class="exp__item">
                                 <div class="exp__date">
                                     <time datetime="2022">2008</time><span class="dash">&mdash;</span><time datetime="2013">2013</time>
                                 </div>
-                                <p class="exp__speciality-name">
+                                <p class="exp__speciality-name" data-lang="exp__speciality-name-university">
                                     «Organization and Management of Foundry Production» &#47; «Machinery and Foundry Technology» &#47; Bachelor`s degree
                                 </p>
-                                <p class="exp__institution-name">
+                                <p class="exp__institution-name" data-lang="exp__institution-name-university">
                                     Gomel State Technical University named after P.O. Sukhoi
                                 </p>
                             </section>
                         </section>
                         <section class="education__additional">
-                            <h4 class="education__content-title">Additional education</h4>
+                            <h4 class="education__content-title" data-lang="exp__subtitle-additional">Additional education</h4>
                             <div class="chain"></div>
                             <section class="exp__item">
                                 <div class="exp__date">
-                                    <time datetime="2022-12">December, 2022</time><span class="dash">&mdash;</span><time datetime="2023-08">August, 2023</time>
+                                    <time datetime="2022-12" data-lang="exp__date-from-upskill">December, 2022</time><span class="dash">&mdash;</span><time datetime="2023-08" data-lang="exp__date-to-upskill">August, 2023</time>
                                 </div>
-                                <p class="exp__speciality-name">
+                                <p class="exp__speciality-name" data-lang="exp__speciality-name-upskill">
                                     Online training course «UpSkill Me» &#47; JS &#47; Front-End
                                 </p>
                                 <p class="exp__institution-name">
@@ -199,20 +207,20 @@
                             </section>
                             <section class="exp__item">
                                 <div class="exp__date">
-                                    <time datetime="2022-11">November, 2022</time>
+                                    <time datetime="2022-11" data-lang="exp__date-it-fundementals">November, 2022</time>
                                 </div>
-                                <p class="exp__speciality-name">
+                                <p class="exp__speciality-name" data-lang="exp__speciality-name-it-fundementals">
                                     Online training course «IT Fundamentals» &#47; «Basics of Computer Science. Basics of Programming. Math for IT»
                                 </p>
-                                <p class="exp__institution-name">
+                                <p class="exp__institution-name" data-lang="exp__institution-name-it-fundementals">
                                     «EPAM Learn Platform»
                                 </p>
                             </section>
                             <section class="exp__item">
                                 <div class="exp__date">
-                                    <time datetime="2022-03">March, 2022</time><span class="dash">&mdash;</span><time datetime="2022-04">April, 2022</time>
+                                    <time datetime="2022-03" data-lang="exp__date-from-sl">March, 2022</time><span class="dash">&mdash;</span><time datetime="2022-04" data-lang="exp__date-to-sl">April, 2022</time>
                                 </div>
-                                <p class="exp__speciality-name">
+                                <p class="exp__speciality-name" data-lang="exp__speciality-name-sl">
                                     Online training course «HTML5» &#47; «CSS3»
                                 </p>
                                 <p class="exp__institution-name">
@@ -221,12 +229,12 @@
                             </section>
                             <section class="exp__item">
                                 <div class="exp__date">
-                                    <time datetime="2021-07">July, 2021</time><span class="dash">&mdash;</span><time datetime="2022-01">January, 2022</time>
+                                    <time datetime="2021-07" data-lang="exp__date-from-itc">July, 2021</time><span class="dash">&mdash;</span><time datetime="2022-01" data-lang="exp__date-to-itc">January, 2022</time>
                                 </div>
-                                <p class="exp__speciality-name">
+                                <p class="exp__speciality-name" data-lang="exp__speciality-name-itc">
                                     Training course «Basic knowledge of programming and algorithm knowledge using C language and JS»
                                 </p>
-                                <p class="exp__institution-name">
+                                <p class="exp__institution-name" data-lang="exp__institution-name-itc">
                                     «IT Class» &#47; Gomel
                                 </p>
                             </section>
@@ -234,10 +242,10 @@
                                 <div class="exp__date">
                                     <time datetime="2006">2006</time><span class="dash">&mdash;</span><time datetime="2008">2008</time>
                                 </div>
-                                <p class="exp__speciality-name">
+                                <p class="exp__speciality-name" data-lang="exp__speciality-name-upk">
                                     Training for the profession of «Computer Operator»
                                 </p>
-                                <p class="exp__institution-name">
+                                <p class="exp__institution-name" data-lang="exp__institution-name-upk">
                                     Educational Institution «Inter-School UPK№1» &#47; Gomel
                                 </p>
                             </section>
@@ -246,17 +254,17 @@
                 </article>
                 <!-- Work Experience -->
                 <article class="work-exp">
-                    <h3 class="info__title detailed__title">Work expirience</h3>
+                    <h3 class="info__title detailed__title" data-lang="detailed-title-work-exp">Work expirience</h3>
                     <section class="work-exp__content">
                         <div class="chain chain_work-exp"></div>
                             <section class="exp__item">
                                 <div class="exp__date">
                                     <time datetime="2018">2018</time><span class="dash">&mdash;</span><time datetime="2022">2022</time>
                                 </div>
-                                <p class="exp__speciality-name">
+                                <p class="exp__speciality-name" data-lang="exp__speciality-name-chief">
                                     Chief Engineer
                                 </p>
-                                <p class="exp__institution-name">
+                                <p class="exp__institution-name" data-lang="exp__institution-name-llc-prom">
                                     LLC «Prompodgotovka» &#47; Gomel
                                 </p>
                             </section>
@@ -264,10 +272,10 @@
                                 <div class="exp__date">
                                     <time datetime="2015">2015</time><span class="dash">&mdash;</span><time datetime="2018">2018</time>
                                 </div>
-                                <p class="exp__speciality-name">
+                                <p class="exp__speciality-name" data-lang="exp__speciality-name-teacher">
                                     Teacher
                                 </p>
-                                <p class="exp__institution-name">
+                                <p class="exp__institution-name" data-lang="exp__institution-name-pei-prom">
                                     Private Educational Institution «Center for training, advanced training and retraining of workers «Prompodgotovka&ndash;Obrazovanie» &#47; Gomel
                                 </p>
                             </section>
@@ -275,10 +283,10 @@
                                 <div class="exp__date">
                                     <time datetime="2013">2013</time><span class="dash">&mdash;</span><time datetime="2015">2015</time>
                                 </div>
-                                <p class="exp__speciality-name">
+                                <p class="exp__speciality-name" data-lang="exp__institution-name-centrolit">
                                     Process engineer
                                 </p>
-                                <p class="exp__institution-name">
+                                <p class="exp__institution-name" data-lang="exp__institution-name-pei-prom">
                                     OJSC «Gomel Foundry «CENTROLIT» &#47; Gomel
                                 </p>
                             </section>
@@ -286,19 +294,19 @@
                 </article>
                 <!-- References -->
                 <article class="references">
-                    <h3 class="info__title detailed__title">References</h3>
+                    <h3 class="info__title detailed__title" data-lang="references-title">References</h3>
                     <section class="references__content">
                         <section class="references__item">
-                            <p class="references__name">Andrian Chernenkov
+                            <p class="references__name" data-lang="references-name-chernenkov">Andrian Chernenkov
                             </p>
-                            <p class="references__name-company">LLC «Prompodgotovka» &#47; Director</p>
+                            <p class="references__name-company" data-lang="references-name-company-lls">LLC «Prompodgotovka» &#47; Director</p>
                             <span class="references__contact-title">Email:</span>
                             <a class="references__contact" href="mailto:dkranprom@mail.ru">dkranprom@mail.ru</a>
                         </section>
                         <section class="references__item">
-                            <p class="references__name">Stanislav Shevtsov
+                            <p class="references__name" data-lang="references-name-shetsov">Stanislav Shevtsov
                             </p>
-                            <p class="references__name-company">PEI «Prompodgotovka&ndash;Obrazovanie» &#47; Director</p>
+                            <p class="references__name-company" data-lang="references-name-company-pei">PEI «Prompodgotovka&ndash;Obrazovanie» &#47; Director</p>
                             <span class="references__contact-title">Email:</span>
                             <a class="references__contact" href="mailto:prompodgotovka@mail.ru">prompodgotovka@mail.ru</a>
                         </section>

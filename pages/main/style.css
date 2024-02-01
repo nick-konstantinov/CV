@@ -44,6 +44,7 @@ body{
 /* Header */
 
 .header {
+    position: relative;
     display: flex;
     align-items: center;
     padding: 5.5rem 0 2.5rem;
@@ -90,7 +91,7 @@ body{
 
 .last-name::after {
     content: "";
-    width: 75%;
+    width: 81%;
     height: 1px;
     position: absolute;
     left: 4px;
@@ -101,10 +102,44 @@ body{
 .professional-title {
     position: relative;
     left: 7px;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     font-weight: 100;
-    letter-spacing: 0.5rem;
+    letter-spacing: 0.3rem;
     margin-top: 1.2rem;
+}
+
+/* Language Menu */
+
+.lang-menu {
+    position: absolute;
+    top: 2.5rem;
+    right: 3.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.lang-btn {
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: 1px solid #313340;
+    background: transparent;
+    cursor: pointer;
+    text-transform: uppercase;
+
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.lang-btn:hover {
+    background-color: #313340;
+    color: #f1f1f1;
+}
+
+.lang-btn_active {
+    background-color: #313340;
+    color: #f1f1f1;
 }
 
 /* Info */
@@ -315,7 +350,7 @@ body{
     margin-bottom: 0.3rem;
     display: flex;
     flex-wrap: wrap;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
 }
 
 .languages__item:last-child {
@@ -327,19 +362,18 @@ body{
 }
 
 .languages__img img {
-    max-width: 2.5rem;
+    max-width: 2.3rem;
     height: auto;
 }
 
 .languages__name {
     display: flex;
-    width: 30%;
+    width: 100%;
     font-weight: 700;
 }
 
 .languages__level {
-    margin-left: 1rem;
-    width: 65%;
+    width: 100%;
 }
 
 /* Awards */
@@ -409,7 +443,7 @@ body{
 
 .detailed-info {
     margin-top: 2rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     padding-left: 2rem;
     padding-right: 2rem;
     width: 70%;
@@ -506,7 +540,7 @@ body{
 
 .references__item {
     margin-top: 0.5rem;
-    width: 40%;
+    width: 45%;
     font-size: 1.5rem;
 }
 
