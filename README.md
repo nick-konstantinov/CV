@@ -1,3 +1,3 @@
 # CV
 
-CV Mikita Kanstantsinau (front-end developer)
+[CV Mikita Kanstantsinau (Software Development Engineer)](https://nick-konstantinov.github.io/CV/pages/main/index.html)
