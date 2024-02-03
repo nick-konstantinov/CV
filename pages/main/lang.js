@@ -1,9 +1,24 @@
 "use strict";
 
+// Set available languages
 const arrLangs = ['en', 'ru'];
+
+function checkBrowserLang() {
+    const navLang = navigator.language.slice(0, 2).toLocaleLowerCase();
+    const result = arrLangs.some(elem => {
+        return navLang === elem;
+    });
+
+    if (result) {
+        return navLang;
+    }
+}
+
+// Set the language when loading the page
 let currentLang = localStorage.getItem('language') || checkBrowserLang() || 'en';
 const langBtns = document.querySelectorAll('[data-btn]');
 
+// Text for main page
 const mainPageText = {
     'first-name': {
         en: 'Mikita',
@@ -78,15 +93,15 @@ const mainPageText = {
         ru: 'Профиль',
     },
     'profile-text-path1': {
-        en: 'Hello, I&#180;m software development engineer. I&#180;m interested animating static artist or designer templates to life. And also, I like to create convenient and interactive interfaces for websites and applications.',
+        en: 'Hello, I&#180;m a software development engineer. I&#180;m interested in animating static artists` or designers` templates to life. And I also enjoy creating convenient and interactive interfaces for websites and applications.',
         ru: 'Привет, я инженер-разработчик программного обеспечения. Мне интересно оживлять статичные шаблоны художников или дизайнеров. А также создавать удобные и интерактивные интерфейсы сайтов и приложений.',
     },
     'profile-text-path2': {
-        en: 'Many years of experience as a teacher allowed me to develop communication skills and the ability to clearly convey my thoughts and ideas, and my experience as an engineer allowed me to find effective solutions to complex problems. As a chief engineer, I successfully led a team of specialists, distributing tasks and responsibilities. My strengths are: the ability to work in a team, involvement in the process of working on a project and the ability to put myself in the shoes of the customer or end user in order to improve the product I create.',
+        en: 'Many years of experience as a teacher allowed me to develop communication skills and the ability to express my thoughts and ideas clearly, and my experience as an engineer allowed me to find effective solutions to complex problems. As a chief engineer, I successfully managed a team of specialists, distributing tasks and responsibilities. I consider my strengths are the ability to work in a team, involvement in the process of working on a project and the ability to put myself in the shoes of the customer or the end user in order to improve the product I create.',
         ru: 'Многолетний опыт работы преподавателем позволил мне развить навыки коммуникации и умение четко доносить свои мысли и идеи, а опыт работы инженером  - находить эффективные решения сложных задач. Будучи главным инженером я успешно руководил командой специалистов, распределяя задания и обязанности. Мои сильные стороны: умение работать в команде, вовлеченность в процесс работы над проектом и способность поставить себя на место заказчика или конечного пользователя чтобы улучшить продукт, который я создаю.',
     },
     'profile-text-path3': {
-        en: 'At the moment, my goal is to become a successful frontend developer who can handle complex tasks on different projects. To do this, I continue studying hard and every day I either learn something new and hone knowledge in practice.',
+        en: 'At the moment my goal is to become a successful frontend developer who can handle complex tasks on different projects. To do this, I continue studying hard and every day I learn something new and hone my knowledge in practice.',
         ru: 'На данный момент моя цель — стать успешным фронтенд-разработчиком, способным решать сложные задачи в разных проектах. Для этого я продолжаю усердно учиться и каждый день изучаю что-то новое и оттачиваю знания на практике.',
     },
     'education__title': {
@@ -185,11 +200,11 @@ const mainPageText = {
         en: 'Private Educational Institution &#171;Center for training, advanced training and retraining of workers &#171;Prompodgotovka&ndash;Obrazovanie&#187; &#47; Gomel',
         ru: 'ЧУО &#171;Центр подготовки, повышения квалификации и переподготовки рабочих &#171;Промподготовка&ndash;Образование&#187; &#47; Гомель',
     },
-    'exp__institution-name-centrolit': {
+    'exp__speciality-name-centrolit': {
         en: 'Process engineer',
         ru: 'Инженер-технолог',
     },
-    'exp__institution-name-pei-prom': {
+    'exp__institution-name-centrolit': {
         en: 'OJSC &#171;Gomel Foundry &#171;CENTROLIT&#187; &#47; Gomel',
         ru: 'ОАО &#171;Гомельский литейных завод &#171;ЦЕНТРОЛИТ&#187; &#47; Гомель',
     },
@@ -221,21 +236,11 @@ function changeLang() {
         if (elem) {
             elem.innerHTML = mainPageText[key][currentLang];
         }
-
     }
 }
 
+// Change language
 changeLang();
-
-langBtns.forEach(btn => {
-    btn.addEventListener('click', (event)=>{
-        currentLang = event.target.dataset.btn;
-        localStorage.setItem('language', currentLang);
-        removeActiveClass(langBtns, 'lang-btn_active');
-        btn.classList.add('lang-btn_active');
-        changeLang();
-    });
-});
 
 function removeActiveClass (arr, activeClass) {
     arr.forEach(elem => {
@@ -257,15 +262,16 @@ function checkActiveLangBtn() {
     }
 }
 
+// Check the active class of the language button
 checkActiveLangBtn();
 
-function checkBrowserLang() {
-    const navLang = navigator.language.slice(0, 2).toLocaleLowerCase();
-    const result = arrLangs.some(elem => {
-        return navLang === elem;
+// Change language when clicking language buttons
+langBtns.forEach(btn => {
+    btn.addEventListener('click', (event)=>{
+        currentLang = event.target.dataset.btn;
+        localStorage.setItem('language', currentLang);
+        removeActiveClass(langBtns, 'lang-btn_active');
+        btn.classList.add('lang-btn_active');
+        changeLang();
     });
-
-    if (result) {
-        return navLang;
-    }
-}
+});
