@@ -87,7 +87,7 @@ body {
 .photo img {
     max-width: 18rem;
     height: auto;
-    border-radius: 50%
+    border-radius: 50%;
 }
 
 .header__text  {
