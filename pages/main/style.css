@@ -88,6 +88,13 @@ body {
     max-width: 18rem;
     height: auto;
     border-radius: 50%;
+    filter: grayscale(1);
+
+    transition: filter 0.3s;
+}
+
+.photo img:hover {
+    filter: grayscale(0);
 }
 
 .header__text  {
@@ -168,6 +175,100 @@ body {
 .lang-btn_active {
     background-color: #313340;
     color: #f1f1f1;
+}
+
+/* Download Menu */
+
+.download-menu {
+    position: absolute;
+    top: 7rem;
+    right: 3.7rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: 1px solid #313340;
+
+    transition: background-color 0.3s;
+}
+
+.download__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1.8rem;
+    height: 1.8rem;
+    fill: #000;
+
+    transition: fill 0.3s;
+}
+
+.download-menu:hover {
+    background-color: #313340;
+}
+
+.download-menu:hover .download__icon_dl{
+    fill: #fff;
+}
+
+.download-menu__list {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.download-menu:hover .download-menu__list {
+    height: 18rem;
+}
+
+.download-menu__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    border: 1px solid #313340;
+    border-radius: 50%;
+
+    opacity: 0;
+
+    transition: background-color 0.3s, top 0.3s ease-out, opacity 0.1s;
+}
+
+.download-menu:hover .download-menu__item {
+    opacity: 1;
+}
+
+.download-menu:hover .download-menu__item_pdf {
+    top: 4.5rem;
+}
+
+.download-menu:hover .download-menu__item_doc {
+    top: 9rem;
+}
+
+.download-menu:hover .download-menu__item_ppt {
+    top: 13.5rem;
+}
+
+.download__icon_pdf, .download__icon_doc, .download__icon_ppt  {
+    top: 55%;
+    left: 62%;
+    width: 2.5rem;
+    height: 2.5rem;
+
+    transition: fill 0.3s;
+}
+
+.download-menu__item:hover {
+    background: #313340;
+}
+
+.download-menu__item:hover .download__icon {
+    fill: #fff;
 }
 
 /* Info */
@@ -645,7 +746,7 @@ body {
     }
 
     .last-name::after {
-        width: 98%;
+        width: 50rem;
     }
 
     .professional-title {
@@ -705,7 +806,7 @@ body {
     }
 }
 
-@media (max-width: 950px) {
+@media (max-width: 1000px) {
 
     /* Header */
 
@@ -714,7 +815,7 @@ body {
     }
 
     .header__text {
-        margin-top: 1rem;
+        margin-top: 3.5rem;
     }
 
     .photo {
@@ -885,6 +986,10 @@ body {
 @media (max-width: 400px) {
     .lang-menu {
         right: 0.5rem;
+    }
+
+    .download-menu {
+        right: 0.7rem;
     }
 
     .first-name, .last-name {
