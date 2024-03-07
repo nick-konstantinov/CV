@@ -290,18 +290,17 @@ p {
   }
 }
 .header__photo img {
-  width: 18rem;
-  aspect-ratio: 1;
+  max-width: 18rem;
+  height: auto;
   display: inline-block;
   border-radius: 50%;
   filter: grayscale(1);
   transition: filter 0.3s;
-  height: auto;
 }
 @media (max-width: 1200px) {
   .header__photo img {
-    width: 15rem;
-    aspect-ratio: 1;
+    max-width: 15rem;
+    height: auto;
   }
 }
 .header__photo img:hover {

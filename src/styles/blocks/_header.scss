@@ -23,16 +23,17 @@
         }
 
         & img {
-            @include square(18rem);
+            max-width: 18rem;
+            height: auto;
 
             display: inline-block;
             border-radius: 50%;
             filter: grayscale(1);
             transition: filter 0.3s;
-            height: auto;
 
             @include desktop {
-                @include square(15rem);
+                max-width: 15rem;
+                height: auto;
             }
         }
 
