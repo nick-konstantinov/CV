@@ -13,7 +13,7 @@ function checkBrowserLang() {
 }
 
 // Set the language when loading the page
-let currentLang = localStorage.getItem('language') || checkBrowserLang() || 'en';
+let currentLang = 'ru';
 const langBtns = document.querySelectorAll('[data-btn]');
 
 // Text for main page
