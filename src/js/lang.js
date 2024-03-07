@@ -27,8 +27,8 @@ const mainPageText = {
         ru: 'Константинов',
     },
     'professional-title': {
-        en: 'Software Development Engineer',
-        ru: 'Инженер-разработчик программного обеспечения',
+        en: 'Frontend Developer',
+        ru: 'Фронтенд-разработчик',
     },
     'contacts__title': {
         en: 'Contacts',
