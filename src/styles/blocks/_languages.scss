@@ -1,0 +1,65 @@
+.languages {
+    order: 1;
+    padding-top: 1.5rem;
+
+    @include laptop {
+        padding-top: 3rem;
+    }
+
+    &__content {
+
+        @include laptop {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+    }
+
+    &__item {
+        margin-bottom: 0.8rem;
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 1.5rem;
+
+        @include laptop {
+            margin-top: 1rem;
+            max-width: 100%;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+
+            @include laptop {
+                margin-top: 0rem;
+            }
+        }
+    }
+
+    &__img {
+        margin-right: 0.2rem;
+
+        & img {
+            max-width: 2.3rem;
+            height: auto;
+        }
+    }
+
+    &__name {
+        display: flex;
+        width: 100%;
+        font-weight: 700;
+
+        @include laptop {
+            justify-content: center;
+        }
+    }
+
+    &__level {
+        width: 100%;
+
+        @include laptop {
+            text-align: center;
+        }
+    }
+}

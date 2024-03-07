@@ -1,0 +1,42 @@
+.canvas {
+    max-width: 1100px;
+    margin: 0 auto;
+    background-color: var(--color-white);
+    box-shadow: var(--shadow-canvas);
+    border-radius: 1px;
+}
+
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    border: 0 !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+    clip-path: inset(100%) !important;
+    clip: rect(0 0 0 0) !important;
+    overflow: hidden !important;
+}
+
+.dash {
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
+}
+
+.chain {
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 10px;
+    border-left: 1px dashed var(--color-black);
+}
+
+.chain_education-add {
+    top: 40px;
+}
+
+.chain_work-exp {
+    top: 10px;
+    left: 5px;
+}

@@ -1,0 +1,149 @@
+.header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 5.5rem 0 4rem;
+
+    @include desktop {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    @include laptop {
+        flex-wrap: wrap;
+    }
+
+    &__photo {
+        display: flex;
+        justify-content: center;
+        width: 30%;
+
+        @include laptop {
+            width: 100%;
+        }
+
+        & img {
+            @include square(18rem);
+
+            display: inline-block;
+            border-radius: 50%;
+            filter: grayscale(1);
+            transition: filter 0.3s;
+
+            @include desktop {
+                @include square(15rem);
+            }
+        }
+
+        & img:hover {
+            filter: grayscale(0);
+        }
+    }
+
+    &__text {
+        width: 70%;
+        margin-left: 2rem;
+        font-family: var(--font-family-accent);
+        font-size: 2.8rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 0.6rem;
+
+        @include desktop {
+            font-size: 2.5rem;
+            letter-spacing: 0.4rem;
+        }
+
+        @include laptop {
+            margin-top: 3.5rem;
+            padding: 0 4rem;
+            width: 100%;
+            margin-left: 0;
+            text-align: center;
+            font-size: 2.2rem;
+            letter-spacing: 0.2rem;
+        }
+
+        @include mobile {
+            padding: 0 2rem;
+        }
+    }
+
+    &__name {
+        &--first-name, &--last-name {
+            display: block;
+
+            @include laptop {
+                width: 100%;
+            }
+
+            @include mobile {
+                font-size: 3.5rem;
+            }
+
+            @include mobile-small {
+                font-size: 2.5rem;
+            }
+        }
+
+        &--first-name {
+            font-family: var(--font-family-base);
+            font-weight: 100;
+            line-height: 1.1;
+        }
+
+        &--last-name {
+            position: relative;
+            left: 1px;
+            font-weight: 700;
+
+            @include desktop {
+                width: 90%;
+                line-height: 1.1;
+            }
+
+            @include laptop {
+                width: 100%;
+                left: 0;
+            }
+
+            &::after {
+                content: "";
+                width: 81%;
+                height: 1px;
+                position: absolute;
+                left: 4px;
+                bottom: 0;
+                background: var(--color-black);
+
+                @include desktop {
+                    width: 50rem;
+                }
+
+                @include laptop {
+                    width: 100%;
+                    left: 0
+                }
+            }
+        }
+    }
+
+    &__professional {
+        position: relative;
+        left: 7px;
+        font-size: 1.5rem;
+        font-weight: 100;
+        letter-spacing: 0.3rem;
+        margin-top: 1.2rem;
+
+        @include desktop {
+            width: 90%;
+            margin-top: 0.7rem;
+            font-size: 1.3rem;
+        }
+
+        @include mobile {
+            font-size: 1.2rem;
+        }
+    }
+}

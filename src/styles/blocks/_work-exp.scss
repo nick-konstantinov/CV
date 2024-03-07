@@ -1,0 +1,12 @@
+.work-exp {
+
+    @include laptop {
+        margin-top: 2rem;
+    }
+
+    &__content {
+        position: relative;
+        margin-top: 1.5rem;
+        padding-left: 0.5rem;
+    }
+}

@@ -1,0 +1,23 @@
+@import 'normalize',
+        'fonts',
+        'mixins',
+        'media',
+        'globals',
+        'varibles',
+        'utils';
+
+@import 'blocks/header',
+        'blocks/lang-menu',
+        'blocks/download-menu',
+        'blocks/info',
+        'blocks/contacts',
+        'blocks/skills',
+        'blocks/languages',
+        'blocks/work-examples',
+        'blocks/awards',
+        'blocks/profile',
+        'blocks/education',
+        'blocks/exp',
+        'blocks/work-exp',
+        'blocks/references',
+        'blocks/footer';

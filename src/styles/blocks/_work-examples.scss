@@ -1,0 +1,47 @@
+.work-examples {
+    order: 1;
+    padding-top: 1.5rem;
+
+    &__content {
+        margin-top: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    &__card {
+        margin: 1rem;
+        display: flex;
+        justify-content: center;
+
+        @include desktop {
+            margin: 0.5rem;
+        }
+
+        & img {
+            position: relative;
+            width: 11.3rem;
+            height: 8rem;
+            filter: grayscale(1);
+
+            transition: all 0.3s ease-out;
+
+            @include desktop {
+                width: 10rem;
+                height: auto;
+            }
+        }
+
+        &:hover img {
+            filter: grayscale(0);
+            box-shadow: var(--shadow-card);
+            transform: scale(1.3);
+            z-index: 1;
+        }
+    }
+
+    &__link {
+        position: relative;
+        display: block;
+    }
+}

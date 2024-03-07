@@ -1,0 +1,93 @@
+.download-menu {
+    position: absolute;
+    top: 7rem;
+    right: 3.7rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: var(--border);
+
+    transition: background-color 0.3s;
+
+    @include mobile-small {
+        right: 0.7rem;
+    }
+
+    &__icon {
+        @include abs-center;
+
+        width: 1.8rem;
+        height: 1.8rem;
+        fill: var(--color-black);
+
+        transition: fill 0.3s;
+
+        &--pdf, &--doc, &--ppt {
+            top: 55%;
+            left: 62%;
+            width: 2.5rem;
+            height: 2.5rem;
+
+            transition: fill 0.3s;
+        }
+    }
+
+    &__list {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        list-style-type: none;
+        cursor: pointer;
+    }
+
+    &__item {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 4rem;
+        height: 4rem;
+        border: var(--border);
+        border-radius: 50%;
+
+        opacity: 0;
+
+        transition: background-color 0.3s, top 0.3s ease-out, opacity 0.1s;
+
+        &:hover {
+            background: var(--color-dark);
+
+            & .download-menu__icon {
+                fill: #ffffff;
+            }
+        }
+    }
+
+    &:hover {
+        background-color: var(--color-dark);
+
+        & .download-menu__icon--dl {
+            fill: #ffffff;
+        }
+
+        & .download-menu__list {
+            height: 18rem;
+        }
+
+        & .download-menu__item {
+            opacity: 1;
+        }
+
+        & .download-menu__item--pdf {
+            top: 4.5rem;
+        }
+
+        & .download-menu__item--doc {
+            top: 9rem;
+        }
+
+        & .download-menu__item--ppt {
+            top: 13.5rem;
+        }
+    }
+}

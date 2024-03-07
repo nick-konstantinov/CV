@@ -1,0 +1,15 @@
+@mixin abs-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+}
+
+@mixin square($size) {
+    width: $size;
+    aspect-ratio: 1;
+}
+
+@mixin animationSkills($name) {
+    animation: $name ease-out 1 normal forwards;
+}

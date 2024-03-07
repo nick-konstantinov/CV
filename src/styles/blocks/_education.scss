@@ -1,0 +1,31 @@
+.education {
+    padding-top: 2rem;
+
+    &__content {
+        margin-top: 1.5rem;
+        padding-left: 0.5rem;
+
+        @include laptop {
+            margin-top: 0;
+        }
+
+        &-title {
+            font-family: var(--font-family-accent);
+            font-size: 1.7rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            margin-left: -0.5rem;
+            margin-bottom: 1rem;
+            letter-spacing: 0.1rem;
+
+            @include laptop {
+                text-align: center;
+            }
+        }
+    }
+
+    &__higher, &__additional {
+        position: relative;
+        margin-top: 1rem;
+    }
+}

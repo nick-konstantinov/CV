@@ -1,0 +1,17 @@
+.profile {
+
+    &__title {
+        line-height: 80%;
+
+        & + .profile__text {
+            margin-top: 1rem;
+        }
+    }
+
+    &__text {
+        margin-top: 0.7rem;
+        font-size: 1.6rem;
+        line-height: 1.4;
+    }
+
+}

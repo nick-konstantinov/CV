@@ -1,0 +1,36 @@
+.lang-menu {
+    position: absolute;
+    top: 2.5rem;
+    right: 3.5rem;
+    display: flex;
+    justify-content: space-between;
+
+    @include mobile-small {
+        right: 0.5rem;
+    }
+
+    &__btn {
+        margin-left: 0.2rem;
+        margin-right: 0.2rem;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        border: var(--border);
+        background: transparent;
+        cursor: pointer;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+
+        transition: background-color 0.3s, color 0.3s;
+
+        @include hover {
+            background-color: var(--color-dark);
+            color: var(--color-white);
+        }
+
+        &--active {
+            background-color: var(--color-dark);
+            color: var(--color-white);
+        }
+    }
+}

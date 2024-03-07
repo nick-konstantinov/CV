@@ -1,0 +1,66 @@
+.references {
+
+    &__content {
+        margin-top: 0.7rem;
+        padding-left: 0.2rem;
+        display: flex;
+
+        @include tablet {
+            flex-wrap: wrap;
+            text-align: center;
+        }
+    }
+
+    &__item {
+        margin-top: 0.5rem;
+        width: 50%;
+        font-size: 1.5rem;
+
+        @include laptop {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 50%;
+        }
+
+        @include tablet {
+            width: 100%;
+        }
+
+        &:last-child {
+
+            @include tablet {
+                margin-top: 2rem;
+            }
+        }
+    }
+
+    &__name {
+        line-height: 1.2;
+        font-weight: 700;
+
+        &-company {
+            font-size: 1.2rem;
+        }
+    }
+
+    &__contact {
+        text-decoration: underline;
+        font-size: 1.4rem;
+        text-decoration-color: transparent;
+        color: var(--color-black);
+
+        transition: text-decoration-color 0.3s;
+
+        &-title {
+            margin-top: 0.3rem;
+            font-size: 1.4rem;
+            font-weight: 700;
+            display: inline-block;
+        }
+
+        &:hover {
+            text-decoration-color: var(--color-black);
+        }
+    }
+}

@@ -1,0 +1,32 @@
+:root {
+    --color-dark: #313340;
+    --color-black: #000000;
+    --color-white: #F1F1F1;
+
+    --border: 1px solid var(--color-dark);
+
+    --shadow-canvas: -14px 14px 28px rgba(0,0,0,0.25), -10px 10px 10px rgba(0,0,0,0.22);
+    --shadow-card: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
+    --font-family-base: 'Montserrat', sans-serif;
+    --font-family-accent: 'Comfortaa', sans-serif;
+
+    // Skills
+
+    /* Hard skills */
+    --skills-html5: 95%;
+    --skills-css3: 95%;
+    --skills-js: 85%;
+    --skills-ts: 70%;
+    --skills-angular: 50%;
+
+    /* Soft skills */
+    --skills-webpack: 75%;
+    --skills-git: 90%;
+    --skills-ps: 85%;
+
+    // Principles
+    --skills-basic: 90%;
+    --skills-agile: 90%;
+    --skills-http: 75%;
+}

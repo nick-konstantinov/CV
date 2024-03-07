@@ -1,0 +1,143 @@
+.contacts {
+    order: 1;
+
+    @include laptop {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        order: 2;
+    }
+
+    &__title {
+        line-height: 80%;
+    }
+
+    &__content {
+        padding-top: 1.5rem;
+        font-size: 1.6rem;
+        font-style: normal;
+
+        @include laptop {
+            padding-top: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__item {
+        display: flex;
+        max-width: 29rem;
+        margin-top: 0.5rem;
+
+        @include desktop {
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        @include laptop {
+            max-width: 29rem;
+            text-align: center;
+        }
+
+        &-title {
+            width: 29%;
+            font-weight: 700;
+            line-height: 1.2;
+
+            @include desktop {
+                width: 100%;
+            }
+        }
+
+        &-text {
+            position: relative;
+            margin-left: 0.5rem;
+            width: 70%;
+            line-height: 1.2;
+            overflow-wrap: break-word;
+            text-decoration: underline;
+            text-decoration-color: transparent;
+            color: var(--color-black);
+
+            transition: text-decoration-color 0.3s;
+
+            @include desktop {
+                width: 100%;
+                margin-left: 0;
+                margin-top: 0.2rem;
+                padding-left: 2.5rem;
+            }
+
+            @include laptop {
+                padding-left: 0;
+            }
+
+            &:hover {
+                text-decoration-color: var(--color-black);
+            }
+
+            &::after {
+                content: "";
+                width: 2rem;
+                height: 2rem;
+                position: absolute;
+                z-index: 1;
+                opacity: 0;
+
+                transition: opacity 0.3s;
+
+                @include desktop {
+                    opacity: 1;
+                    top: 0;
+                    left: 0;
+                }
+
+                @include laptop {
+                    display: none;
+                }
+            }
+
+            &:hover::after {
+                opacity: 1;
+            }
+
+            &--address::after {
+                top: 1rem;
+                right: -1rem;
+                background: url('../icons/map-pin.svg') no-repeat;
+
+                @include desktop {
+                    top: 1rem;
+                }
+            }
+
+            &--email::after {
+                top: 1.2rem;
+                right: -1.2rem;
+                background: url('../icons/mail.svg') no-repeat;
+
+                @include desktop {
+                    top: 1rem;
+                }
+            }
+
+            &--telegram::after {
+                top: 0.3rem;
+                right: 1rem;
+                background: url('../icons/telegram.svg') no-repeat;
+            }
+
+            &--linkedin::after {
+                top: 0.2rem;
+                right: 0.5rem;
+                background: url('../icons/linkedin.svg') no-repeat;
+            }
+
+            &--github::after {
+                top: 0.1rem;
+                right: 3rem;
+                background: url('../icons/github.svg') no-repeat;
+            }
+        }
+    }
+}

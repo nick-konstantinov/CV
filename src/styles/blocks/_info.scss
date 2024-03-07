@@ -1,0 +1,58 @@
+.info {
+    display: flex;
+
+    @include laptop {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+
+    &__title {
+        font-family: var(--font-family-base);
+        text-align: center;
+        font-size: 2.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    &__short {
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        padding: 0 2rem;
+
+        @include laptop {
+            width: 100%;
+            padding: 0 4rem;
+        }
+
+        @include mobile {
+            padding: 0 2rem;
+        }
+    }
+
+    &__detailed {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        width: 70%;
+        border-left: 1px solid #000000;
+
+        @include laptop {
+            width: 100%;
+            padding: 0 4rem;
+            border: none;
+        }
+
+        @include mobile {
+            padding: 0 2rem;
+        }
+
+        &-title {
+            line-height: 1.3;
+            text-align: left;
+
+            @include laptop {
+                text-align: center;
+            }
+        }
+    }
+}
