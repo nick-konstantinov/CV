@@ -296,6 +296,7 @@ p {
   border-radius: 50%;
   filter: grayscale(1);
   transition: filter 0.3s;
+  height: auto;
 }
 @media (max-width: 1200px) {
   .header__photo img {

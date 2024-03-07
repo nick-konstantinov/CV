@@ -29,6 +29,7 @@
             border-radius: 50%;
             filter: grayscale(1);
             transition: filter 0.3s;
+            height: auto;
 
             @include desktop {
                 @include square(15rem);
