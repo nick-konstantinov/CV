@@ -22,8 +22,20 @@
     &__item {
         position: relative;
         display: flex;
+        justify-content: space-between;
         align-items: center;
         margin-bottom: 1.9rem;
+
+        &-title {
+            display: flex;
+            align-items: center;
+        }
+
+        &-time {
+            display: flex;
+            font-size: 1.5rem;
+            color: #808080;
+        }
 
         &::before, &::after {
             content: "";
@@ -84,6 +96,10 @@
 
         &--ps::after {
             @include animationSkills(ps);
+        }
+
+        &--basic, &--agile, &--http {
+            justify-content: start;
         }
     }
 

@@ -39,16 +39,32 @@ const mainPageText = {
         ru: 'Адрес:',
     },
     'address__text': {
-        en: 'Sulaberidze st., Batumi, Georgia',
-        ru: 'ул. Сулаберидзе, Батуми, Грузия',
+        en: 'Batumi, Georgia',
+        ru: 'г.Батуми, Грузия',
     },
     'hard-skill__title': {
         en: 'Hard skills',
         ru: 'Проф. навыки',
     },
-    'hard-skill__angular': {
-        en: 'Angular v.5 (basic knowledge)',
-        ru: 'Angular v.5 (базовые знания)',
+    'hard-skill__html-time': {
+        en: 'yr+',
+        ru: 'г+',
+    },
+    'hard-skill__css-time': {
+        en: 'yr+',
+        ru: 'г+',
+    },
+    'hard-skill__js-time': {
+        en: 'yr+',
+        ru: 'г+',
+    },
+    'hard-skill__ts-time': {
+        en: 'yr+',
+        ru: 'г+',
+    },
+    'hard-skill__angular-time': {
+        en: 'yr+',
+        ru: 'г+',
     },
     'soft-skill__title': {
         en: 'Soft skills',
@@ -56,11 +72,23 @@ const mainPageText = {
     },
     'soft-skill__git': {
         en: 'Version control (Git)',
-        ru: 'Система контроля версий (Git)',
+        ru: 'Сист. контроля версий (Git)',
     },
     'soft-skill__ps': {
         en: 'Graphics editors (Ps, Figma)',
         ru: 'Граф. редакторы (Ps, Figma)',
+    },
+    'soft-skill__webpack-time': {
+        en: 'yr+',
+        ru: 'г+',
+    },
+    'soft-skill__git-time': {
+        en: 'yr+',
+        ru: 'г+',
+    },
+    'soft-skill__ps-time': {
+        en: 'yr+',
+        ru: 'г+',
     },
     'principles-skill__title': {
         en: 'Principles',
@@ -75,8 +103,8 @@ const mainPageText = {
         ru: 'Английский:',
     },
     'languages-text__en-level': {
-        en: 'A2 (Pre-Intermediate)',
-        ru: 'A2 (Пред. средний уровень)',
+        en: 'B1 (Intermediate)',
+        ru: 'B1 (Средний уровень)',
     },
     'languages-text__ru-title': {
         en: 'Russian:',
@@ -191,7 +219,7 @@ const mainPageText = {
         ru: 'УО &#171;Межшкольный УПК №1&#187;',
     },
     'detailed-title-work-exp': {
-        en: 'Work expirience',
+        en: 'Work experience',
         ru: 'Опыт работы',
     },
     'exp__speciality-name-chief': {

@@ -6,6 +6,7 @@
     <link type="image/x-icon" href="icons/favicon.ico" rel="shortcut icon">
     <link rel="stylesheet" href="styles/styles.css">
     <script defer src="js/lang.js"></script>
+    <script defer src="js/period-of-experience.js"></script>
     <script defer src="js/chains.js"></script>
     <script defer src="js/download-menu.js"></script>
     <title>CV Mikita Kanstantsinau</title>
@@ -76,7 +77,7 @@
                     <address class="contacts__content">
                         <div class="contacts__item">
                             <p class="contacts__item-title" data-lang="address__title">Address:</p>
-                            <a class="contacts__item-text contacts__item-text--address" data-lang="address__text" href="https://maps.app.goo.gl/7D56cp5SSvFk8hJo9" target="_blank">Sulaberidze st., Batumi, Georgia</a>
+                            <a class="contacts__item-text contacts__item-text--address" data-lang="address__text" href="https://maps.app.goo.gl/7D56cp5SSvFk8hJo9" target="_blank">Batumi, Georgia</a>
                         </div>
                         <div class="contacts__item">
                             <p class="contacts__item-title">Email:</p>
@@ -101,39 +102,87 @@
                     <h3 class="info__title skills__hard-title" data-lang="hard-skill__title">Hard skills</h3>
                     <ul class="skills__content">
                         <li class="skills__item skills__item--html5">
-                            <img class="skills__img" src="icons/html5.png" alt="">
-                            <p class="skills__text">HTML5</p>
+                            <div class="skills__item-title">
+                                <img class="skills__img" src="icons/html5.png" alt="">
+                                <p class="skills__text">HTML5</p>
+                            </div>
+                            <div class="skills__item-time">
+                                <span id="html">2</span>
+                                <span data-lang="hard-skill__html-time">yr+</span>
+                            </div>
                         </li>
                         <li class="skills__item skills__item--css3">
-                            <img class="skills__img" src="icons/css3.png" alt="">
-                            <p class="skills__text">CSS3 (SCSS&#47;SASS&#47;LESS)</p>
+                            <div class="skills__item-title">
+                                <img class="skills__img" src="icons/css3.png" alt="">
+                                <p class="skills__text">CSS3 (SCSS&#47;SASS&#47;LESS)</p>
+                            </div>
+                            <div class="skills__item-time">
+                                <span id="css">2</span>
+                                <span data-lang="hard-skill__css-time">yr+</span>
+                            </div>
                         </li>
                         <li class="skills__item skills__item--js">
-                            <img class="skills__img" src="icons/js.png" alt="">
-                            <p class="skills__text" data-lang="hard-skill__js">JavaScript</p>
+                            <div class="skills__item-title">
+                                <img class="skills__img" src="icons/js.png" alt="">
+                                <p class="skills__text" data-lang="hard-skill__js">JavaScript</p>
+                            </div>
+                            <div class="skills__item-time">
+                                <span id="js">2</span>
+                                <span data-lang="hard-skill__js-time">yr+</span>
+                            </div>
                         </li>
                         <li class="skills__item skills__item--ts">
-                            <img class="skills__img" src="icons/ts.png" alt="">
-                            <p class="skills__text">TypeScript v.5</p>
+                            <div class="skills__item-title">
+                                <img class="skills__img" src="icons/ts.png" alt="">
+                                <p class="skills__text">TypeScript v.5</p>
+                            </div>
+                            <div class="skills__item-time">
+                                <span id="ts">2</span>
+                                <span data-lang="hard-skill__ts-time">yr+</span>
+                            </div>
                         </li>
                         <li class="skills__item skills__item--angular">
-                            <img class="skills__img" src="icons/angular.png" alt="">
-                            <p class="skills__text" data-lang="hard-skill__angular">Angular v.5 (basic knowledge)</p>
+                            <div class="skills__item-title">
+                                <img class="skills__img" src="icons/angular.png" alt="">
+                                <p class="skills__text">Angular v.5</p>
+                            </div>
+                            <div class="skills__item-time">
+                                <span id="angular">2</span>
+                                <span data-lang="hard-skill__angular-time">yr+</span>
+                            </div>
                         </li>
                     </ul>
                     <h3 class="info__title skills__soft-title" data-lang="soft-skill__title">Soft skills</h3>
                     <ul class="skills__content">
                         <li class="skills__item skills__item--webpack">
-                            <img class="skills__img" src="icons/webpack.png" alt="">
-                            <p class="skills__text">Webpack v.5</p>
+                            <div class="skills__item-title">
+                                <img class="skills__img" src="icons/webpack.png" alt="">
+                                <p class="skills__text">Webpack v.5</p>
+                            </div>
+                            <div class="skills__item-time">
+                                <span id="webpack">2</span>
+                                <span data-lang="soft-skill__webpack-time">yr+</span>
+                            </div>
                         </li>
                         <li class="skills__item skills__item--git">
-                            <img class="skills__img" src="icons/git-logo.png" alt="">
-                            <p class="skills__text" data-lang="soft-skill__git">Version control (Git)</p>
+                            <div class="skills__item-title">
+                                <img class="skills__img" src="icons/git-logo.png" alt="">
+                                <p class="skills__text" data-lang="soft-skill__git">Version control (Git)</p>
+                            </div>
+                            <div class="skills__item-time">
+                                <span id="git">2</span>
+                                <span data-lang="soft-skill__git-time">yr+</span>
+                            </div>
                         </li>
                         <li class="skills__item skills__item--ps">
-                            <img class="skills__img" src="icons/ps.png" alt="">
-                            <p class="skills__text" data-lang="soft-skill__ps">Graphics editors (Ps, Figma)</p>
+                            <div class="skills__item-title">
+                                <img class="skills__img" src="icons/ps.png" alt="">
+                                <p class="skills__text" data-lang="soft-skill__ps">Graphics editors (Ps, Figma)</p>
+                            </div>
+                            <div class="skills__item-time">
+                                <span id="ps">2</span>
+                                <span data-lang="soft-skill__ps-time">yr+</span>
+                            </div>
                         </li>
                     </ul>
                     <h3 class="info__title skills__principles-title" data-lang="principles-skill__title">Principles</h3>
@@ -163,7 +212,7 @@
                                 </div>
                                 <p class="languages__name-title" data-lang="languages-text__en-title">English:</p>
                             </div>
-                            <p class="languages__level" data-lang="languages-text__en-level">A2 (Pre-Intermediate)</p>
+                            <p class="languages__level" data-lang="languages-text__en-level">B1 (Intermediate)</p>
                         </li>
                         <li class="languages__item">
                             <div class="languages__name">
@@ -315,7 +364,7 @@
                 </article>
                 <!-- Work Experience -->
                 <article class="exp work-exp">
-                    <h3 class="info__title info__detailed-title" data-lang="detailed-title-work-exp">Work expirience</h3>
+                    <h3 class="info__title info__detailed-title" data-lang="detailed-title-work-exp">Work experience</h3>
                     <section class="work-exp__content">
                             <section class="exp__item">
                                 <div class="exp__date">

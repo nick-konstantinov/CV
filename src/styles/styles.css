@@ -851,8 +851,18 @@ p {
 .skills__item {
   position: relative;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   margin-bottom: 1.9rem;
+}
+.skills__item-title {
+  display: flex;
+  align-items: center;
+}
+.skills__item-time {
+  display: flex;
+  font-size: 1.5rem;
+  color: #808080;
 }
 .skills__item::before, .skills__item::after {
   content: "";
@@ -900,6 +910,9 @@ p {
 }
 .skills__item--ps::after {
   animation: ps ease-out 1 normal forwards;
+}
+.skills__item--basic, .skills__item--agile, .skills__item--http {
+  justify-content: start;
 }
 .skills__img {
   display: inline-block;
