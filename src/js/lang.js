@@ -1,5 +1,5 @@
 // Set available languages
-const arrLangs = ['en', 'ru'];
+const arrLangs = ['en', 'en'];
 
 function checkBrowserLang() {
     const navLang = navigator.language.slice(0, 2).toLocaleLowerCase();
