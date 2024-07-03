@@ -566,6 +566,25 @@ p {
   font-weight: 700;
   text-transform: uppercase;
 }
+.info__sub-title {
+  padding-top: 0.7rem;
+  display: inline-block;
+  position: relative;
+  font-family: var(--font-family-base);
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.info__sub-title::after {
+  content: "";
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-black);
+}
 .info__short {
   display: flex;
   flex-direction: column;
@@ -1208,15 +1227,16 @@ p {
 .work-examples {
   order: 1;
   padding-top: 1.5rem;
+  text-align: center;
 }
 .work-examples__content {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 .work-examples__card {
-  margin: 1rem;
+  margin: 0.7rem;
   display: flex;
   justify-content: center;
 }
@@ -1227,15 +1247,15 @@ p {
 }
 .work-examples__card img {
   position: relative;
-  width: 11.3rem;
-  height: 8rem;
+  width: 9rem;
+  height: 6rem;
   filter: grayscale(1);
   transition: all 0.3s ease-out;
 }
 @media (max-width: 1200px) {
   .work-examples__card img {
     width: 10rem;
-    height: auto;
+    height: 7rem;
   }
 }
 .work-examples__card:hover img {
@@ -1247,72 +1267,6 @@ p {
 .work-examples__link {
   position: relative;
   display: block;
-}
-
-.awards {
-  order: 1;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-  padding-top: 1.5rem;
-}
-.awards__content {
-  margin-top: 1rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.awards__card {
-  margin: 0.2rem 0.2rem 1.2rem 0;
-  display: flex;
-  justify-content: center;
-  width: 45%;
-}
-@media (max-width: 1200px) {
-  .awards__card {
-    width: 10rem;
-    margin: 0 1rem 0.5rem;
-  }
-}
-.awards__link {
-  position: relative;
-  display: block;
-  width: 11.3rem;
-  height: 8rem;
-}
-@media (max-width: 1200px) {
-  .awards__link {
-    width: 100%;
-    height: auto;
-  }
-}
-.awards__img-bw {
-  max-width: 100%;
-  height: auto;
-  opacity: 1;
-  will-change: transform;
-  transition: all 0.3s ease-out;
-}
-.awards__img-color {
-  position: absolute;
-  top: 0;
-  left: 0;
-  max-width: 100%;
-  height: auto;
-  opacity: 0;
-  will-change: transform;
-  transition: all 0.3s ease-out;
-}
-.awards__link:hover .awards__img-bw {
-  box-shadow: var(--shadow-card);
-  transform: scale(1.3);
-  opacity: 0;
-}
-.awards__link:hover .awards__img-color {
-  box-shadow: var(--shadow-card);
-  transform: scale(1.3);
-  opacity: 1;
-  z-index: 1;
 }
 
 .profile__title {

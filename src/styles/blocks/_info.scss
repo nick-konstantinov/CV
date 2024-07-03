@@ -14,6 +14,27 @@
         text-transform: uppercase;
     }
 
+    &__sub-title {
+        padding-top: 0.7rem;
+        display: inline-block;
+        position: relative;
+        font-family: var(--font-family-base);
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 300;
+        text-transform: uppercase;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 1px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: var(--color-black);
+        }
+    }
+
     &__short {
         display: flex;
         flex-direction: column;
