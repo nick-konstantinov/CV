@@ -1,5 +1,5 @@
 // Set available languages
-const arrLangs = ['ru', 'ru'];
+const arrLangs = ['en', 'ru'];
 
 function checkBrowserLang() {
     const navLang = navigator.language.slice(0, 2).toLocaleLowerCase();
@@ -13,7 +13,7 @@ function checkBrowserLang() {
 }
 
 // Set the language when loading the page
-let currentLang = 'ru';
+let currentLang = localStorage.getItem('language') || checkBrowserLang() || 'en';
 const langBtns = document.querySelectorAll('[data-btn]');
 
 // Text for main page
