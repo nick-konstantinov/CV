@@ -118,6 +118,18 @@ const mainPageText = {
         en: 'Work examples',
         ru: 'Примеры работ',
     },
+    'work-examples__subtitle-layout': {
+        en: 'Layout',
+        ru: 'Верстка',
+    },
+    'work-examples__subtitle-js': {
+        en: 'Web-apps / js',
+        ru: 'Веб-прилож. / js',
+    },
+    'work-examples__subtitle-angular': {
+        en: 'Web-apps / angular',
+        ru: 'Веб-прилож. / angular',
+    },
     'awards-title': {
         en: 'Awards',
         ru: 'Награды',
