@@ -58,55 +58,156 @@
             @include animationSkills(html5);
         }
 
+        &--html5:hover::after {
+            @include animationSkills(html5-reverse);
+        }
+
+        &--html5:hover .skill__img-icon {
+            fill: var(--color-html5);
+        }
+
         &--css3::after {
             @include animationSkills(css3);
+        }
+
+        &--css3:hover::after {
+            @include animationSkills(css3-reverse);
+        }
+
+        &--css3:hover .skill__img-icon {
+            fill: var(--color-css3);
         }
 
         &--js::after {
             @include animationSkills(js);
         }
 
+        &--js:hover::after {
+            @include animationSkills(js-reverse);
+        }
+
+        &--js:hover .skill__img-icon {
+            fill: var(--color-js);
+        }
+
         &--ts::after {
             @include animationSkills(ts);
+        }
+
+        &--ts:hover::after {
+            @include animationSkills(ts-reverse);
+        }
+
+        &--ts:hover .skill__img-icon {
+            fill: var(--color-ts);
         }
 
         &--angular::after {
             @include animationSkills(angular);
         }
 
+        &--angular:hover::after {
+            @include animationSkills(angular-reverse);
+        }
+
+        &--angular:hover .skill__img-icon {
+            fill: var(--color-angular);
+        }
+
         &--webpack::after {
             @include animationSkills(webpack);
+        }
+
+        &--webpack:hover::after {
+            @include animationSkills(webpack-reverse);
+        }
+
+        &--webpack:hover .skill__img-icon {
+            fill: var(--color-webpack);
         }
 
         &--basic::after {
             @include animationSkills(basic);
         }
 
+        &--basic:hover::after {
+            @include animationSkills(basic-reverse);
+        }
+
         &--agile::after {
             @include animationSkills(agile);
+        }
+
+        &--agile:hover::after {
+            @include animationSkills(agile-reverse);
         }
 
         &--http::after {
             @include animationSkills(http);
         }
 
+        &--http:hover::after {
+            @include animationSkills(http-reverse);
+        }
+
         &--git::after {
             @include animationSkills(git);
+        }
+
+        &--git:hover::after {
+            @include animationSkills(git-reverse);
+        }
+
+        &--git:hover .skill__img-icon {
+            fill: var(--color-git);
         }
 
         &--ps::after {
             @include animationSkills(ps);
         }
 
+        &--ps:hover::after {
+            @include animationSkills(ps-reverse);
+        }
+
+        &--ps:hover .skill__img-icon {
+            fill: var(--color-ps);
+        }
+
         &--basic, &--agile, &--http {
             justify-content: start;
+        }
+
+        &--basic:hover .skill__img-icon {
+            fill: var(--color-ps);
+        }
+
+        &--agile:hover .skill__img-icon {
+            fill: var(--color-html5);
+        }
+
+        &--http:hover .skill__img-icon {
+            fill: var(--color-gray);
         }
     }
 
     &__img {
-        display: inline-block;
         width: 2.8rem;
-        height: auto;
+        height: 2.8rem;
+
+        &-icon {
+            width: 2.8rem;
+            height: auto;
+            fill: var(--color-black);
+        }
+
+        &--ts {
+            display: block;
+            position: relative;
+            top: 1px;
+            left: 1px;
+        }
+
     }
 
     &__text {

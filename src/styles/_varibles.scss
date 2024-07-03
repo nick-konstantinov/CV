@@ -2,6 +2,7 @@
     --color-dark: #313340;
     --color-black: #000000;
     --color-white: #F1F1F1;
+    --color-gray: #808080;
 
     --border: 1px solid var(--color-dark);
 
@@ -12,6 +13,8 @@
     --font-family-accent: 'Comfortaa', sans-serif;
 
     // Skills
+
+    /* Exp level */
 
     /* Hard skills */
     --skills-html5: 95%;
@@ -29,4 +32,15 @@
     --skills-basic: 90%;
     --skills-agile: 90%;
     --skills-http: 75%;
+
+    /* Icons colors */
+
+    --color-html5: #e44d26;
+    --color-css3: #214ce5;
+    --color-js: #f0db4f;
+    --color-ts: #2d79c7;
+    --color-angular: #de002d;
+    --color-webpack: #8ED6FB;
+    --color-git: #f05033;
+    --color-ps: #2861d3;
 }

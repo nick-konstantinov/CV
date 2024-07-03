@@ -198,11 +198,13 @@ p {
   --color-dark: #313340;
   --color-black: #000000;
   --color-white: #F1F1F1;
+  --color-gray: #808080;
   --border: 1px solid var(--color-dark);
   --shadow-canvas: -14px 14px 28px rgba(0,0,0,0.25), -10px 10px 10px rgba(0,0,0,0.22);
   --shadow-card: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   --font-family-base: "Montserrat", sans-serif;
   --font-family-accent: "Comfortaa", sans-serif;
+  /* Exp level */
   /* Hard skills */
   --skills-html5: 95%;
   --skills-css3: 95%;
@@ -216,6 +218,15 @@ p {
   --skills-basic: 90%;
   --skills-agile: 90%;
   --skills-http: 75%;
+  /* Icons colors */
+  --color-html5: #e44d26;
+  --color-css3: #214ce5;
+  --color-js: #f0db4f;
+  --color-ts: #2d79c7;
+  --color-angular: #de002d;
+  --color-webpack: #8ED6FB;
+  --color-git: #f05033;
+  --color-ps: #2861d3;
 }
 
 .canvas {
@@ -669,7 +680,7 @@ p {
     width: 100%;
     margin-left: 0;
     margin-top: 0.2rem;
-    padding-left: 2.5rem;
+    padding-left: 2.7rem;
   }
 }
 @media (max-width: 1000px) {
@@ -705,19 +716,19 @@ p {
   opacity: 1;
 }
 .contacts__item-text--address::after {
-  top: 1rem;
-  right: -1rem;
-  background: url("../icons/map-pin.svg") no-repeat;
+  top: 0.2rem;
+  right: 4.2rem;
+  background: url("../icons/flag-georgia.svg") no-repeat;
 }
 @media (max-width: 1200px) {
   .contacts__item-text--address::after {
-    top: 1rem;
+    top: 0rem;
   }
 }
 .contacts__item-text--email::after {
-  top: 1.2rem;
+  top: 1rem;
   right: -1.2rem;
-  background: url("../icons/mail.svg") no-repeat;
+  background: url("../icons/gmail.svg") no-repeat;
 }
 @media (max-width: 1200px) {
   .contacts__item-text--email::after {
@@ -729,10 +740,20 @@ p {
   right: 1rem;
   background: url("../icons/telegram.svg") no-repeat;
 }
+@media (max-width: 1200px) {
+  .contacts__item-text--telegram::after {
+    top: 0;
+  }
+}
 .contacts__item-text--linkedin::after {
   top: 0.2rem;
-  right: 0.5rem;
+  right: 0.8rem;
   background: url("../icons/linkedin.svg") no-repeat;
+}
+@media (max-width: 1200px) {
+  .contacts__item-text--linkedin::after {
+    top: 0;
+  }
 }
 .contacts__item-text--github::after {
   top: 0.1rem;
@@ -748,11 +769,33 @@ p {
     width: var(--skills-html5);
   }
 }
+@keyframes html5-reverse {
+  0% {
+    width: var(--skills-html5);
+  }
+  5% {
+    width: 0;
+  }
+  100% {
+    width: var(--skills-html5);
+  }
+}
 @keyframes css3 {
   from {
     width: 0;
   }
   to {
+    width: var(--skills-css3);
+  }
+}
+@keyframes css3-reverse {
+  0% {
+    width: var(--skills-css3);
+  }
+  5% {
+    width: 0;
+  }
+  100% {
     width: var(--skills-css3);
   }
 }
@@ -764,11 +807,33 @@ p {
     width: var(--skills-js);
   }
 }
+@keyframes js-reverse {
+  0% {
+    width: var(--skills-js);
+  }
+  5% {
+    width: 0;
+  }
+  100% {
+    width: var(--skills-js);
+  }
+}
 @keyframes ts {
   from {
     width: 0;
   }
   to {
+    width: var(--skills-ts);
+  }
+}
+@keyframes ts-reverse {
+  0% {
+    width: var(--skills-ts);
+  }
+  5% {
+    width: 0;
+  }
+  100% {
     width: var(--skills-ts);
   }
 }
@@ -780,11 +845,33 @@ p {
     width: var(--skills-angular);
   }
 }
+@keyframes angular-reverse {
+  0% {
+    width: var(--skills-angular);
+  }
+  5% {
+    width: 0;
+  }
+  100% {
+    width: var(--skills-angular);
+  }
+}
 @keyframes webpack {
   from {
     width: 0;
   }
   to {
+    width: var(--skills-webpack);
+  }
+}
+@keyframes webpack-reverse {
+  0% {
+    width: var(--skills-webpack);
+  }
+  5% {
+    width: 0;
+  }
+  100% {
     width: var(--skills-webpack);
   }
 }
@@ -796,11 +883,33 @@ p {
     width: var(--skills-basic);
   }
 }
+@keyframes basic-reverse {
+  0% {
+    width: var(--skills-basic);
+  }
+  5% {
+    width: 0;
+  }
+  100% {
+    width: var(--skills-basic);
+  }
+}
 @keyframes agile {
   from {
     width: 0;
   }
   to {
+    width: var(--skills-agile);
+  }
+}
+@keyframes agile-reverse {
+  0% {
+    width: var(--skills-agile);
+  }
+  5% {
+    width: 0;
+  }
+  100% {
     width: var(--skills-agile);
   }
 }
@@ -812,6 +921,17 @@ p {
     width: var(--skills-http);
   }
 }
+@keyframes http-reverse {
+  0% {
+    width: var(--skills-http);
+  }
+  5% {
+    width: 0;
+  }
+  100% {
+    width: var(--skills-http);
+  }
+}
 @keyframes git {
   from {
     width: 0;
@@ -820,11 +940,33 @@ p {
     width: var(--skills-git);
   }
 }
+@keyframes git-reverse {
+  0% {
+    width: var(--skills-git);
+  }
+  5% {
+    width: 0;
+  }
+  100% {
+    width: var(--skills-git);
+  }
+}
 @keyframes ps {
   from {
     width: 0;
   }
   to {
+    width: var(--skills-ps);
+  }
+}
+@keyframes ps-reverse {
+  0% {
+    width: var(--skills-ps);
+  }
+  5% {
+    width: 0;
+  }
+  100% {
     width: var(--skills-ps);
   }
 }
@@ -879,45 +1021,121 @@ p {
   background: var(--color-black);
 }
 .skills__item--html5::after {
-  animation: html5 ease-out 1 normal forwards;
+  animation: html5 0.7s ease-out normal forwards;
+}
+.skills__item--html5:hover::after {
+  animation: html5-reverse 0.7s ease-out normal forwards;
+}
+.skills__item--html5:hover .skill__img-icon {
+  fill: var(--color-html5);
 }
 .skills__item--css3::after {
-  animation: css3 ease-out 1 normal forwards;
+  animation: css3 0.7s ease-out normal forwards;
+}
+.skills__item--css3:hover::after {
+  animation: css3-reverse 0.7s ease-out normal forwards;
+}
+.skills__item--css3:hover .skill__img-icon {
+  fill: var(--color-css3);
 }
 .skills__item--js::after {
-  animation: js ease-out 1 normal forwards;
+  animation: js 0.7s ease-out normal forwards;
+}
+.skills__item--js:hover::after {
+  animation: js-reverse 0.7s ease-out normal forwards;
+}
+.skills__item--js:hover .skill__img-icon {
+  fill: var(--color-js);
 }
 .skills__item--ts::after {
-  animation: ts ease-out 1 normal forwards;
+  animation: ts 0.7s ease-out normal forwards;
+}
+.skills__item--ts:hover::after {
+  animation: ts-reverse 0.7s ease-out normal forwards;
+}
+.skills__item--ts:hover .skill__img-icon {
+  fill: var(--color-ts);
 }
 .skills__item--angular::after {
-  animation: angular ease-out 1 normal forwards;
+  animation: angular 0.7s ease-out normal forwards;
+}
+.skills__item--angular:hover::after {
+  animation: angular-reverse 0.7s ease-out normal forwards;
+}
+.skills__item--angular:hover .skill__img-icon {
+  fill: var(--color-angular);
 }
 .skills__item--webpack::after {
-  animation: webpack ease-out 1 normal forwards;
+  animation: webpack 0.7s ease-out normal forwards;
+}
+.skills__item--webpack:hover::after {
+  animation: webpack-reverse 0.7s ease-out normal forwards;
+}
+.skills__item--webpack:hover .skill__img-icon {
+  fill: var(--color-webpack);
 }
 .skills__item--basic::after {
-  animation: basic ease-out 1 normal forwards;
+  animation: basic 0.7s ease-out normal forwards;
+}
+.skills__item--basic:hover::after {
+  animation: basic-reverse 0.7s ease-out normal forwards;
 }
 .skills__item--agile::after {
-  animation: agile ease-out 1 normal forwards;
+  animation: agile 0.7s ease-out normal forwards;
+}
+.skills__item--agile:hover::after {
+  animation: agile-reverse 0.7s ease-out normal forwards;
 }
 .skills__item--http::after {
-  animation: http ease-out 1 normal forwards;
+  animation: http 0.7s ease-out normal forwards;
+}
+.skills__item--http:hover::after {
+  animation: http-reverse 0.7s ease-out normal forwards;
 }
 .skills__item--git::after {
-  animation: git ease-out 1 normal forwards;
+  animation: git 0.7s ease-out normal forwards;
+}
+.skills__item--git:hover::after {
+  animation: git-reverse 0.7s ease-out normal forwards;
+}
+.skills__item--git:hover .skill__img-icon {
+  fill: var(--color-git);
 }
 .skills__item--ps::after {
-  animation: ps ease-out 1 normal forwards;
+  animation: ps 0.7s ease-out normal forwards;
+}
+.skills__item--ps:hover::after {
+  animation: ps-reverse 0.7s ease-out normal forwards;
+}
+.skills__item--ps:hover .skill__img-icon {
+  fill: var(--color-ps);
 }
 .skills__item--basic, .skills__item--agile, .skills__item--http {
   justify-content: start;
 }
+.skills__item--basic:hover .skill__img-icon {
+  fill: var(--color-ps);
+}
+.skills__item--agile:hover .skill__img-icon {
+  fill: var(--color-html5);
+}
+.skills__item--http:hover .skill__img-icon {
+  fill: var(--color-gray);
+}
 .skills__img {
-  display: inline-block;
+  width: 2.8rem;
+  height: 2.8rem;
+}
+.skills__img-icon {
   width: 2.8rem;
   height: auto;
+  fill: var(--color-black);
+}
+.skills__img--ts {
+  display: block;
+  position: relative;
+  top: 1px;
+  left: 1px;
 }
 .skills__text {
   margin-left: 0.5rem;

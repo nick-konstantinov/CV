@@ -11,5 +11,5 @@
 }
 
 @mixin animationSkills($name) {
-    animation: $name ease-out 1 normal forwards;
+    animation: $name 0.7s ease-out normal forwards;
 }

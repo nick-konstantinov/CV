@@ -3,9 +3,33 @@
     to {width: var(--skills-html5);}
 }
 
+@keyframes html5-reverse {
+    0% {
+        width: var(--skills-html5);
+    }
+    5% {
+        width: 0;
+    }
+    100% {
+        width: var(--skills-html5);
+    }
+}
+
 @keyframes css3{
     from {width: 0;}
     to {width: var(--skills-css3)}
+}
+
+@keyframes css3-reverse {
+    0% {
+        width: var(--skills-css3);
+    }
+    5% {
+        width: 0;
+    }
+    100% {
+        width: var(--skills-css3);
+    }
 }
 
 @keyframes js{
@@ -13,9 +37,33 @@
     to {width: var(--skills-js)}
 }
 
+@keyframes js-reverse {
+    0% {
+        width: var(--skills-js);
+    }
+    5% {
+        width: 0;
+    }
+    100% {
+        width: var(--skills-js);
+    }
+}
+
 @keyframes ts{
     from {width: 0;}
     to {width: var(--skills-ts)}
+}
+
+@keyframes ts-reverse {
+    0% {
+        width: var(--skills-ts);
+    }
+    5% {
+        width: 0;
+    }
+    100% {
+        width: var(--skills-ts);
+    }
 }
 
 @keyframes angular{
@@ -23,9 +71,33 @@
     to {width: var(--skills-angular)}
 }
 
+@keyframes angular-reverse {
+    0% {
+        width: var(--skills-angular);
+    }
+    5% {
+        width: 0;
+    }
+    100% {
+        width: var(--skills-angular);
+    }
+}
+
 @keyframes webpack{
     from {width: 0;}
     to {width: var(--skills-webpack)}
+}
+
+@keyframes webpack-reverse {
+    0% {
+        width: var(--skills-webpack);
+    }
+    5% {
+        width: 0;
+    }
+    100% {
+        width: var(--skills-webpack);
+    }
 }
 
 @keyframes basic{
@@ -33,9 +105,33 @@
     to {width: var(--skills-basic)}
 }
 
+@keyframes basic-reverse {
+    0% {
+        width: var(--skills-basic);
+    }
+    5% {
+        width: 0;
+    }
+    100% {
+        width: var(--skills-basic);
+    }
+}
+
 @keyframes agile{
     from {width: 0;}
     to {width: var(--skills-agile)}
+}
+
+@keyframes agile-reverse {
+    0% {
+        width: var(--skills-agile);
+    }
+    5% {
+        width: 0;
+    }
+    100% {
+        width: var(--skills-agile);
+    }
 }
 
 @keyframes http{
@@ -43,12 +139,48 @@
     to {width: var(--skills-http)}
 }
 
+@keyframes http-reverse {
+    0% {
+        width: var(--skills-http);
+    }
+    5% {
+        width: 0;
+    }
+    100% {
+        width: var(--skills-http);
+    }
+}
+
 @keyframes git{
     from {width: 0;}
     to {width: var(--skills-git)}
 }
 
+@keyframes git-reverse {
+    0% {
+        width: var(--skills-git);
+    }
+    5% {
+        width: 0;
+    }
+    100% {
+        width: var(--skills-git);
+    }
+}
+
 @keyframes ps{
     from {width: 0;}
     to {width: var(--skills-ps)}
+}
+
+@keyframes ps-reverse {
+    0% {
+        width: var(--skills-ps);
+    }
+    5% {
+        width: 0;
+    }
+    100% {
+        width: var(--skills-ps);
+    }
 }
