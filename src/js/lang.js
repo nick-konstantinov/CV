@@ -138,21 +138,33 @@ const mainPageText = {
         en: 'Profile',
         ru: 'Профиль',
     },
-    'profile-text-path1': {
-        en: 'Hello, I&#180;m a software development engineer. I&#180;m interested in animating static artists` or designers` templates to life. And I also enjoy creating convenient and interactive interfaces for websites and applications.',
-        ru: 'Привет, я инженер-разработчик программного обеспечения. Мне интересно оживлять статичные шаблоны художников или дизайнеров. А также создавать удобные и интерактивные интерфейсы сайтов и приложений.',
+    'profile-text': {
+        en: 'Angular developer with experience in building user interfaces, admin panels, and customized web platforms. Participate in planning, requirement refinement, and cross-team collaboration. Represent the frontend team in daily stand-ups and take part in releases and code reviews.',
+        ru: 'Angular-разработчик с опытом создания интерфейсов, админ-панелей и кастомизации веб-платформ. Участвую в планировании, проработке требований и взаимодействии между командами. Представляю фронтенд на дейликах, участвую в релизах и код-ревью.',
     },
-    'profile-text-path2': {
-        en: 'Many years of experience as a teacher allowed me to develop communication skills and the ability to express my thoughts and ideas clearly, and my experience as an engineer allowed me to find effective solutions to complex problems. As a chief engineer, I successfully managed a team of specialists, distributing tasks and responsibilities.',
-        ru: 'Многолетний опыт работы преподавателем позволил мне развить навыки коммуникации и умение четко доносить свои мысли и идеи, а опыт работы инженером  - находить эффективные решения сложных задач. Будучи главным инженером я успешно руководил командой специалистов, распределяя задания и обязанности.',
+    'detailed-title-key-achievements': {
+        en: 'Key achievements',
+        ru: 'Ключевые достижения',
     },
-    'profile-text-path3': {
-        en: 'I consider my strengths are the ability to work in a team, involvement in the process of working on a project and the ability to put myself in the shoes of the customer or the end user in order to improve the product I create.',
-        ru: 'Мои сильные стороны: умение работать в команде, вовлеченность в процесс работы над проектом и способность поставить себя на место заказчика или конечного пользователя чтобы улучшить продукт, который я создаю.',
+    'key-achievements-delivered': {
+        en: 'Delivered 40+ features (profiles, chats, eventsы, billing, admin panels).ds',
+        ru: 'Реализовал 40+ фич (профили, чаты, мероприятия, биллинг, админки).',
     },
-    'profile-text-path4': {
-        en: 'At the moment my goal is to become a successful frontend developer who can handle complex tasks on different projects. To do this, I continue studying hard and every day I learn something new and hone my knowledge in practice.',
-        ru: 'На данный момент моя цель — стать успешным фронтенд-разработчиком, способным решать сложные задачи в разных проектах. Для этого я продолжаю усердно учиться и каждый день изучаю что-то новое и оттачиваю знания на практике.',
+    'key-achievements-fixed': {
+        en: 'Fixed 80+ bugs, significantly improving platform stability.',
+        ru: 'Исправил 80+ багов, значительно улучшив стабильность платформы.',
+    },
+    'key-achievements-custom': {
+        en: 'Completed 9 customizations of web applications to match the branding of various clients.',
+        ru: 'Выполнил 9 кастомизаций веб-приложений под брендинг разных клиентов.',
+    },
+    'key-achievements-optimized': {
+        en: 'Optimized module loading through lazy loading, achieving over a 20% performance improvement.',
+        ru: 'Оптимизировал загрузку модулей за счёт lazy-loading (ускорение более 20%).',
+    },
+    'key-achievements-contributed': {
+        en: 'Contributed to frontend migration to a monorepo — reduced code duplication and accelerated integration by 30–40%.',
+        ru: 'Участвовал в миграции фронтенда в монорепозиторий - сокращение дублирования кода и ускорение интеграции на 30-40%.',
     },
     'education__title': {
         en: 'Education',
@@ -234,9 +246,89 @@ const mainPageText = {
         en: 'Work experience',
         ru: 'Опыт работы',
     },
-    'exp__speciality-name-chief': {
-        en: 'Chief Engineer',
-        ru: 'Главный инженер',
+    'exp__speciality-name-cf': {
+        en: 'CommunityTech Group – Middle Front-end developer',
+        ru: 'CommunityTech Group – Middle Front-end разработчик',
+    },
+    'exp__text-cf-end-time': {
+        en: 'Present',
+        ru: 'по н.в.',
+    },
+    'exp__text-prjs-title': {
+        en: 'Projects:',
+        ru: 'Проекты:',
+    },
+    'exp__text-cf-prjs': {
+        en: 'ClubFirst, ClubFirts Ladies, ClubFirst Future, Opora, Future Leaders, AUZ, CTG, VQ, TNE team',
+        ru: 'ClubFirst, ClubFirts Ladies, ClubFirst Future, Opora, Фонд Будущих Лидеров, НАУЗ, CTG, VQ, ТНЭ team',
+    },
+    'exp__text-description-title': {
+        en: 'Description:',
+        ru: 'Описание:',
+    },
+    'exp__text-cf-description': {
+        en: 'Web applications for business communities',
+        ru: 'Веб-приложения для бизнес-сообществ',
+    },
+    'exp__text-tech-stack-title': {
+        en: 'Tech stack:',
+        ru: 'Технологический стек',
+    },
+    'exp__text-cf-team-title': {
+        en: 'Team:',
+        ru: 'Команда:',
+    },
+    'exp__text-cf-team': {
+        en: '14 members',
+        ru: '14 человек',
+    },
+    'exp__text-cf-goal-1': {
+        en: 'Designed and implemented user interfaces (profiles, chats, events, bookings, billing) with enhanced validation, error handling, and improved UX.',
+        ru: 'Проектировал и реализовывал пользовательские интерфейсы (профили, чаты, мероприятия, бронирования, биллинг) с улучшенной валидацией, обработкой ошибок и удобным UX.',
+    },
+    'exp__text-cf-goal-2': {
+        en: 'Developed and configured admin panels using feature flags and role-based access for flexible functionality management.',
+        ru: 'Разрабатывал и настраивал админ-панели с использованием feature-флагов и ролевого доступа, обеспечивая гибкое управление функциональностью.',
+    },
+    'exp__text-cf-goal-3': {
+        en: 'Customized and branded web platforms for multiple clients, adapting UI/UX to corporate identity.',
+        ru: 'Выполнил 9 кастомизаций платформы под разных клиентов (UI/UX адаптация, брендирование) с адаптацией под фирменный стиль.',
+    },
+    'exp__text-cf-goal-4': {
+        en: 'Contributed to frontend architecture migration and project integration into a monorepo, improving scalability and maintainability.',
+        ru: 'Участвовал в интеграции проектов в монорепозиторий: упрощение разработки, ускорение релизов (30–40%).',
+    },
+    'exp__text-cf-goal-5': {
+        en: 'Actively resolved UI and performance issues.',
+        ru: 'Участвовал в code-review, проработке UI-kit и процессов разработки.',
+    },
+    'exp__text-cf-goal-6': {
+        en: 'Represented the frontend team in daily meetings, handled releases, participated in planning and task estimation, and ensured coordination with other teams.',
+        ru: 'Представлял фронтенд-команду на дейликах, выполнял релизы, участвовал в планировании, оценке задач, обеспечивал синхронизацию с другими командами.',
+    },
+    'exp__speciality-name-fl': {
+        en: 'Freelance – Front-end developer',
+        ru: 'Фриланс – Front-end разработчик',
+    },
+    'exp__text-fl-prjs-title': {
+        en: 'Projects:',
+        ru: 'Проекты:',
+    },
+    'exp__text-cf-description-title': {
+        en: 'Description:',
+        ru: 'Описание:',
+    },
+    'exp__text-fl-description': {
+        en: 'Website for a company specializing in CCTV installation',
+        ru: 'Сайт для компании по установке систем видеонаблюдения',
+    },
+    'exp__text-fl-tech-stack-title': {
+        en: 'Tech stack:',
+        ru: 'Технологический стек:',
+    },
+    'exp__text-fl-goal-1': {
+        en: 'Implemented responsive layouts and interactive elements (burger menus, pop-ups, forms with validation).',
+        ru: 'Реализовал адаптивную верстку и интерактивные элементы (бургер-меню, поп-апы, формы с валидацией).',
     },
     'exp__institution-name-llc-prom': {
         en: 'LLC &#171;Prompodgotovka&#187; &#47; Gomel',
@@ -262,22 +354,22 @@ const mainPageText = {
         en: 'References',
         ru: 'Рекомендации',
     },
-    'references-name-chernenkov': {
-        en: 'Andrian Chernenkov',
-        ru: 'А.Н. Черненков',
+    'references-name-mazina': {
+        en: 'Anna Mazina',
+        ru: 'Анна Мазина',
     },
-    'references-name-company-lls': {
-        en: 'LLC &#171;Prompodgotovka&#187; &#47; Director',
-        ru: 'ООО &#171;Промподготовка&#187; &#47; Директор',
+    'references-name-company-cf-1': {
+        en: 'CommunityTech Group &#47; Project Manager',
+        ru: 'CommunityTech Group &#47;  Руководитель проектов',
     },
-    'references-name-shetsov': {
-        en: 'Stanislav Shevtsov',
-        ru: 'С.А. Шевцов',
+    'references-name-company-cf-2': {
+        en: 'cctv-montaj.ru &#47; Resource owner',
+        ru: 'cctv-montaj.ru &#47; Владелец ресурса',
     },
-    'references-name-company-pei': {
-        en: 'PEI &#171;Prompodgotovka&ndash;Obrazovanie&#187; &#47; Director',
-        ru: 'ЧУО &#171;Промподготовка&ndash;Образование&#187; &#47; Директор',
-    },
+    'references-name-prozorov': {
+        en: 'Andrey Prozorov',
+        ru: 'Андей Прозоров',
+    }
 }
 
 function changeLang() {

@@ -12,6 +12,9 @@
     }
 
     &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         margin-top: 0.5rem;
         width: 50%;
         font-size: 1.5rem;
@@ -41,22 +44,21 @@
 
         &-company {
             font-size: 1.2rem;
+            line-height: 1;
         }
     }
 
     &__contact {
         text-decoration: underline;
-        font-size: 1.4rem;
+        font-size: 1.3rem;
         text-decoration-color: transparent;
         color: var(--color-black);
 
         transition: text-decoration-color 0.3s;
 
-        &-title {
-            margin-top: 0.3rem;
-            font-size: 1.4rem;
-            font-weight: 700;
-            display: inline-block;
+        &-block {
+            padding-top: 0.5rem;
+            line-height: 1;
         }
 
         &:hover {

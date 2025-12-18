@@ -1,0 +1,21 @@
+.key-achievements {
+  padding-top: 2rem;
+
+  &__content {
+    position: relative;
+    margin-top: 1.5rem;
+    padding-left: 0.5rem;
+  }
+
+  &__list {
+    padding-top: 0.5rem;
+  }
+
+  &__item {
+    margin-bottom: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+}

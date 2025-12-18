@@ -1,8 +1,5 @@
 .work-exp {
-
-    @include laptop {
-        margin-top: 2rem;
-    }
+    padding-top: 2rem;
 
     &__content {
         position: relative;

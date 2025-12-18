@@ -28,17 +28,12 @@
 
             display: inline-block;
             border-radius: 50%;
-            filter: grayscale(1);
             transition: filter 0.3s;
 
             @include desktop {
                 max-width: 15rem;
                 height: auto;
             }
-        }
-
-        & img:hover {
-            filter: grayscale(0);
         }
     }
 
