@@ -799,387 +799,6 @@ p {
   background: url("../icons/github.svg") no-repeat;
 }
 
-@keyframes html5 {
-  from {
-    width: 0;
-  }
-  to {
-    width: var(--skills-html5);
-  }
-}
-@keyframes html5-reverse {
-  0% {
-    width: var(--skills-html5);
-  }
-  5% {
-    width: 0;
-  }
-  100% {
-    width: var(--skills-html5);
-  }
-}
-@keyframes css3 {
-  from {
-    width: 0;
-  }
-  to {
-    width: var(--skills-css3);
-  }
-}
-@keyframes css3-reverse {
-  0% {
-    width: var(--skills-css3);
-  }
-  5% {
-    width: 0;
-  }
-  100% {
-    width: var(--skills-css3);
-  }
-}
-@keyframes js {
-  from {
-    width: 0;
-  }
-  to {
-    width: var(--skills-js);
-  }
-}
-@keyframes js-reverse {
-  0% {
-    width: var(--skills-js);
-  }
-  5% {
-    width: 0;
-  }
-  100% {
-    width: var(--skills-js);
-  }
-}
-@keyframes ts {
-  from {
-    width: 0;
-  }
-  to {
-    width: var(--skills-ts);
-  }
-}
-@keyframes ts-reverse {
-  0% {
-    width: var(--skills-ts);
-  }
-  5% {
-    width: 0;
-  }
-  100% {
-    width: var(--skills-ts);
-  }
-}
-@keyframes angular {
-  from {
-    width: 0;
-  }
-  to {
-    width: var(--skills-angular);
-  }
-}
-@keyframes angular-reverse {
-  0% {
-    width: var(--skills-angular);
-  }
-  5% {
-    width: 0;
-  }
-  100% {
-    width: var(--skills-angular);
-  }
-}
-@keyframes webpack {
-  from {
-    width: 0;
-  }
-  to {
-    width: var(--skills-webpack);
-  }
-}
-@keyframes webpack-reverse {
-  0% {
-    width: var(--skills-webpack);
-  }
-  5% {
-    width: 0;
-  }
-  100% {
-    width: var(--skills-webpack);
-  }
-}
-@keyframes basic {
-  from {
-    width: 0;
-  }
-  to {
-    width: var(--skills-basic);
-  }
-}
-@keyframes basic-reverse {
-  0% {
-    width: var(--skills-basic);
-  }
-  5% {
-    width: 0;
-  }
-  100% {
-    width: var(--skills-basic);
-  }
-}
-@keyframes agile {
-  from {
-    width: 0;
-  }
-  to {
-    width: var(--skills-agile);
-  }
-}
-@keyframes agile-reverse {
-  0% {
-    width: var(--skills-agile);
-  }
-  5% {
-    width: 0;
-  }
-  100% {
-    width: var(--skills-agile);
-  }
-}
-@keyframes http {
-  from {
-    width: 0;
-  }
-  to {
-    width: var(--skills-http);
-  }
-}
-@keyframes http-reverse {
-  0% {
-    width: var(--skills-http);
-  }
-  5% {
-    width: 0;
-  }
-  100% {
-    width: var(--skills-http);
-  }
-}
-@keyframes git {
-  from {
-    width: 0;
-  }
-  to {
-    width: var(--skills-git);
-  }
-}
-@keyframes git-reverse {
-  0% {
-    width: var(--skills-git);
-  }
-  5% {
-    width: 0;
-  }
-  100% {
-    width: var(--skills-git);
-  }
-}
-@keyframes ps {
-  from {
-    width: 0;
-  }
-  to {
-    width: var(--skills-ps);
-  }
-}
-@keyframes ps-reverse {
-  0% {
-    width: var(--skills-ps);
-  }
-  5% {
-    width: 0;
-  }
-  100% {
-    width: var(--skills-ps);
-  }
-}
-.skills {
-  order: 1;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-  padding-top: 2rem;
-}
-.skills__title, .skills__soft-title, .skills__principles-title {
-  padding-top: 1.5rem;
-}
-.skills__content {
-  margin-top: 1rem;
-  list-style-type: none;
-}
-@media (max-width: 1000px) {
-  .skills__content {
-    margin: 0 auto;
-    max-width: 50rem;
-  }
-}
-.skills__item {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1.9rem;
-}
-.skills__item-title {
-  display: flex;
-  align-items: center;
-}
-.skills__item-time {
-  display: flex;
-  font-size: 1.5rem;
-  color: #808080;
-}
-.skills__item::before, .skills__item::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -1rem;
-  height: 4px;
-}
-.skills__item::before {
-  width: 100%;
-  background: #dadada;
-}
-.skills__item::after {
-  background: var(--color-black);
-}
-.skills__item--html5::after {
-  animation: html5 0.7s ease-out normal forwards;
-}
-.skills__item--html5:hover::after {
-  animation: html5-reverse 0.7s ease-out normal forwards;
-}
-.skills__item--html5:hover .skill__img-icon {
-  fill: var(--color-html5);
-}
-.skills__item--css3::after {
-  animation: css3 0.7s ease-out normal forwards;
-}
-.skills__item--css3:hover::after {
-  animation: css3-reverse 0.7s ease-out normal forwards;
-}
-.skills__item--css3:hover .skill__img-icon {
-  fill: var(--color-css3);
-}
-.skills__item--js::after {
-  animation: js 0.7s ease-out normal forwards;
-}
-.skills__item--js:hover::after {
-  animation: js-reverse 0.7s ease-out normal forwards;
-}
-.skills__item--js:hover .skill__img-icon {
-  fill: var(--color-js);
-}
-.skills__item--ts::after {
-  animation: ts 0.7s ease-out normal forwards;
-}
-.skills__item--ts:hover::after {
-  animation: ts-reverse 0.7s ease-out normal forwards;
-}
-.skills__item--ts:hover .skill__img-icon {
-  fill: var(--color-ts);
-}
-.skills__item--angular::after {
-  animation: angular 0.7s ease-out normal forwards;
-}
-.skills__item--angular:hover::after {
-  animation: angular-reverse 0.7s ease-out normal forwards;
-}
-.skills__item--angular:hover .skill__img-icon {
-  fill: var(--color-angular);
-}
-.skills__item--webpack::after {
-  animation: webpack 0.7s ease-out normal forwards;
-}
-.skills__item--webpack:hover::after {
-  animation: webpack-reverse 0.7s ease-out normal forwards;
-}
-.skills__item--webpack:hover .skill__img-icon {
-  fill: var(--color-webpack);
-}
-.skills__item--basic::after {
-  animation: basic 0.7s ease-out normal forwards;
-}
-.skills__item--basic:hover::after {
-  animation: basic-reverse 0.7s ease-out normal forwards;
-}
-.skills__item--agile::after {
-  animation: agile 0.7s ease-out normal forwards;
-}
-.skills__item--agile:hover::after {
-  animation: agile-reverse 0.7s ease-out normal forwards;
-}
-.skills__item--http::after {
-  animation: http 0.7s ease-out normal forwards;
-}
-.skills__item--http:hover::after {
-  animation: http-reverse 0.7s ease-out normal forwards;
-}
-.skills__item--git::after {
-  animation: git 0.7s ease-out normal forwards;
-}
-.skills__item--git:hover::after {
-  animation: git-reverse 0.7s ease-out normal forwards;
-}
-.skills__item--git:hover .skill__img-icon {
-  fill: var(--color-git);
-}
-.skills__item--ps::after {
-  animation: ps 0.7s ease-out normal forwards;
-}
-.skills__item--ps:hover::after {
-  animation: ps-reverse 0.7s ease-out normal forwards;
-}
-.skills__item--ps:hover .skill__img-icon {
-  fill: var(--color-ps);
-}
-.skills__item--basic, .skills__item--agile, .skills__item--http {
-  justify-content: start;
-}
-.skills__item--basic:hover .skill__img-icon {
-  fill: var(--color-ps);
-}
-.skills__item--agile:hover .skill__img-icon {
-  fill: var(--color-html5);
-}
-.skills__item--http:hover .skill__img-icon {
-  fill: var(--color-gray);
-}
-.skills__img {
-  width: 2.8rem;
-  height: 2.8rem;
-}
-.skills__img-icon {
-  width: 2.8rem;
-  height: auto;
-  fill: var(--color-black);
-}
-.skills__img--ts {
-  display: block;
-  position: relative;
-  top: 1px;
-  left: 1px;
-}
-.skills__text {
-  margin-left: 0.5rem;
-  font-size: 1.5rem;
-}
-
 .languages {
   order: 1;
   padding-top: 1.5rem;
@@ -1332,19 +951,34 @@ p {
 }
 
 .exp__item {
-  margin-bottom: 1rem;
   position: relative;
-  font-size: 1.4rem;
+  margin-bottom: 1rem;
   padding-left: 2rem;
+  font-size: 1.4rem;
+  padding-bottom: 1.5rem;
+}
+.exp__item:last-child {
+  padding-bottom: 0;
+}
+.exp__item:last-child::after {
+  content: "";
+  position: absolute;
+  left: -0.9rem;
+  top: calc(0.35rem + 10px);
+  bottom: 0;
+  width: 2px;
+  background-color: var(--color-white);
+  z-index: 2;
 }
 .exp__item::before {
   content: "";
   position: absolute;
-  top: 0.5rem;
-  left: -0.34rem;
-  width: 0.8rem;
-  height: 0.8rem;
-  background: #000;
+  top: 0.35rem;
+  left: -1.2rem;
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-black);
+  z-index: 1;
   transform: rotate(45deg);
 }
 .exp__speciality {
@@ -1372,6 +1006,19 @@ p {
   list-style-type: disc;
 }
 
+.education__additional {
+  position: relative;
+}
+.education__additional::before {
+  content: "";
+  position: absolute;
+  top: 3.6rem;
+  bottom: 0;
+  left: -0.8rem;
+  width: 0;
+  border-left: 1px dashed var(--color-black);
+}
+
 .key-achievements {
   padding-top: 2rem;
 }
@@ -1397,6 +1044,26 @@ p {
   position: relative;
   margin-top: 1.5rem;
   padding-left: 0.5rem;
+}
+.work-exp__content-item::before {
+  content: "";
+  position: absolute;
+  top: 0.35rem;
+  left: -1.2rem;
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-black);
+  z-index: 1;
+  transform: rotate(45deg);
+}
+.work-exp__content::before {
+  content: "";
+  position: absolute;
+  top: 1rem;
+  bottom: 0;
+  left: -0.35rem;
+  width: 0;
+  border-left: 1px dashed var(--color-black);
 }
 
 .references__content {

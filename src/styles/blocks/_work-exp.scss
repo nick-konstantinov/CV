@@ -1,9 +1,35 @@
 .work-exp {
-    padding-top: 2rem;
+  padding-top: 2rem;
 
-    &__content {
-        position: relative;
-        margin-top: 1.5rem;
-        padding-left: 0.5rem;
+  &__content {
+    position: relative;
+    margin-top: 1.5rem;
+    padding-left: 0.5rem;
+
+    &-item {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0.35rem;
+        left: -1.2rem;
+        width: 8px;
+        height: 8px;
+        background-color: var(--color-black);
+        z-index: 1;
+        transform: rotate(45deg);
+      }
+
     }
+
+    // Вертикальная штриховая линия
+    &::before {
+      content: "";
+      position: absolute;
+      top: 1rem;
+      bottom: 0;
+      left: -0.35rem;
+      width: 0;
+      border-left: 1px dashed var(--color-black);
+    }
+  }
 }

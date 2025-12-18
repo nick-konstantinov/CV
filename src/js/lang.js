@@ -369,7 +369,11 @@ const mainPageText = {
     'references-name-prozorov': {
         en: 'Andrey Prozorov',
         ru: 'Андей Прозоров',
-    }
+    },
+    'detailed-title-key-skills': {
+        en: 'Skills',
+        ru: 'Навыки',
+    },
 }
 
 function changeLang() {
