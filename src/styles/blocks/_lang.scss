@@ -1,0 +1,9 @@
+.lang-animate {
+  transition: opacity 0.25s ease, transform 0.25s ease, filter 0.25s ease;
+}
+
+.lang-hide {
+  opacity: 0;
+  transform: translateY(6px);
+  filter: blur(4px);
+}

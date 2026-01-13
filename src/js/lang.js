@@ -278,6 +278,22 @@ const mainPageText = {
         en: 'Team:',
         ru: 'Команда:',
     },
+    'exp__text-cf-tech-stack': {
+        en: 'Angular, TypeScript, RxJS, NgRX, Angular Material, SCSS, REST API, Swagger, Webpack, Npm, CI/CD Gitlab, Agile, Scrum, Kanban, Jira',
+        ru: 'Angular, TypeScript, RxJS, NgRX, Angular Material, SCSS, REST API, Swagger, Webpack, Npm, CI/CD Gitlab, Agile, Scrum, Kanban, Jira',
+    },
+    'exp__text-team-title': {
+        en: 'Team:',
+        ru: 'Команда:',
+    },
+    'exp__text-fl-description-title': {
+        en: 'Description:',
+        ru: 'Описание:',
+    },
+    'exp__institution-name-it-fundementals': {
+        en: 'EPAM Learn Platform',
+        ru: 'EPAM Learn Platform',
+    },
     'exp__text-cf-team': {
         en: '14 members',
         ru: '14 человек',
@@ -359,34 +375,94 @@ const mainPageText = {
         ru: 'Анна Мазина',
     },
     'references-name-company-cf-1': {
-        en: 'CommunityTech Group &#47; Project Manager',
-        ru: 'CommunityTech Group &#47;  Руководитель проектов',
+        en: 'Project Manager',
+        ru: 'Руководитель проектов',
     },
     'references-name-company-cf-2': {
-        en: 'cctv-montaj.ru &#47; Resource owner',
-        ru: 'cctv-montaj.ru &#47; Владелец ресурса',
+        en: 'Resource owner',
+        ru: 'Владелец ресурса',
     },
     'references-name-prozorov': {
         en: 'Andrey Prozorov',
         ru: 'Андей Прозоров',
     },
-    'detailed-title-key-skills': {
+    'title-key-skills': {
         en: 'Skills',
         ru: 'Навыки',
     },
 }
 
-function changeLang() {
-    for (const key in mainPageText) {
-        const elem = document.querySelector(`[data-lang=${key}]`);
-        if (elem) {
-            elem.innerHTML = mainPageText[key][currentLang];
-        }
-    }
+// function changeLang() {
+//     for (const key in mainPageText) {
+//         const elem = document.querySelector(`[data-lang=${key}]`);
+//         if (elem) {
+//             elem.innerHTML = mainPageText[key][currentLang];
+//         }
+//     }
+// }
+
+// function changeLangAnimated() {
+//     const elements = [];
+
+//     for (const key in mainPageText) {
+//         const elem = document.querySelector(`[data-lang="${key}"]`);
+//         if (elem) {
+//             elem.classList.add('lang-animate');
+//             elem.classList.add('lang-hide');
+//             elements.push({ elem, key });
+//         }
+//     }
+
+//     setTimeout(() => {
+//         elements.forEach(({ elem, key }) => {
+//             elem.innerHTML = mainPageText[key][currentLang];
+//             elem.classList.remove('lang-hide');
+//         });
+//     }, 250);
+// }
+
+// function changeLangAnimatedStagger() {
+//     const nodes = Object.keys(mainPageText)
+//         .map(key => ({
+//             key,
+//             elem: document.querySelector(`[data-lang="${key}"]`)
+//         }))
+//         .filter(item => item.elem);
+
+//     nodes.forEach((item, index) => {
+//         item.elem.classList.add('lang-animate');
+//         item.elem.classList.add('lang-hide');
+
+//         setTimeout(() => {
+//             item.elem.innerHTML = mainPageText[item.key][currentLang];
+//             item.elem.classList.remove('lang-hide');
+//         }, 60 + index * 60);
+//     });
+// }
+
+function changeLangAnimatedGrouped() {
+    const groups = document.querySelectorAll('[data-lang-group]');
+
+    groups.forEach(group => {
+        const items = group.querySelectorAll('[data-lang]');
+
+        items.forEach((el, index) => {
+            const key = el.dataset.lang;
+
+            el.classList.add('lang-animate');
+            el.classList.add('lang-hide');
+
+            setTimeout(() => {
+                el.innerHTML = mainPageText[key][currentLang];
+                el.classList.remove('lang-hide');
+            }, 80 + index * 40);
+        });
+    });
 }
 
 // Change language
-changeLang();
+// changeLang();
+changeLangAnimatedGrouped();
 
 function removeActiveClass (arr, activeClass) {
     arr.forEach(elem => {
@@ -418,6 +494,6 @@ langBtns.forEach(btn => {
         localStorage.setItem('language', currentLang);
         removeActiveClass(langBtns, 'lang-menu__btn--active');
         btn.classList.add('lang-menu__btn--active');
-        changeLang();
+        changeLangAnimatedGrouped();
     });
 });
