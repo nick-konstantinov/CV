@@ -28,4 +28,18 @@
     position: relative;
     margin-top: 1rem;
   }
+
+  .exp__item {
+    &::before {
+      left: -0.3rem;
+    }
+
+    &:last-child::after {
+      left: 0.1rem;
+    }
+  }
+
+  .education__additional::before {
+    left: 0.1rem;
+  }
 }
