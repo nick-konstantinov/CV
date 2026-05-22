@@ -5,7 +5,18 @@
   "description": "Personal CV / portfolio of Mikita Kanstantsinau (Nick Konstantinov), Frontend Developer.",
   "scripts": {
     "build:css": "sass --no-source-map src/styles/styles.scss src/styles/styles.css",
-    "watch:css": "sass --watch src/styles/styles.scss src/styles/styles.css"
+    "watch:css": "sass --watch src/styles/styles.scss src/styles/styles.css",
+    "build": "npm run build:css",
+    "start": "node local-server.js",
+    "dev:local": "node local-server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "nodemailer": "^6.9.14"
   },
   "devDependencies": {
     "sass": "^1.77.8"
