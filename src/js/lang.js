@@ -39,8 +39,8 @@ const mainPageText = {
         ru: 'Адрес:',
     },
     'address__text': {
-        en: 'Batumi, Georgia',
-        ru: 'г.Батуми, Грузия',
+        en: 'Gomel, Belarus',
+        ru: 'г.Гомель, Беларусь',
     },
     'hard-skill__title': {
         en: 'Hard skills',
@@ -389,6 +389,58 @@ const mainPageText = {
     'title-key-skills': {
         en: 'Skills',
         ru: 'Навыки',
+    },
+    'how-i-work__title': {
+        en: 'How I work',
+        ru: 'Как я работаю',
+    },
+    'how-i-work__approach-title': {
+        en: 'Approach to tasks',
+        ru: 'Подход к задачам',
+    },
+    'how-i-work__approach-1': {
+        en: 'Decompose large tasks into small ones with explicit acceptance criteria; validate assumptions as early as possible.',
+        ru: 'Большие задачи декомпозирую на маленькие с явными acceptance-критериями; гипотезы проверяю как можно раньше.',
+    },
+    'how-i-work__approach-2': {
+        en: 'Read existing code and look for established patterns in the repo before introducing new abstractions.',
+        ru: 'Сначала читаю существующий код и ищу принятые в репо паттерны, и только потом ввожу новые абстракции.',
+    },
+    'how-i-work__approach-3': {
+        en: 'Small commits with clear messages; large changes split into a chain of focused PRs.',
+        ru: 'Делаю маленькие коммиты с понятными сообщениями; крупные изменения дроблю на цепочку сфокусированных PR.',
+    },
+    'how-i-work__approach-4': {
+        en: 'For tricky cases — sketch the data flow / sequence diagram first (Figma / Excalidraw), then code.',
+        ru: 'В сложных кейсах сперва рисую data flow или sequence-диаграмму (Figma / Excalidraw), а потом сажусь за код.',
+    },
+    'how-i-work__approach-5': {
+        en: 'Code review focused on correctness and business logic, not just style.',
+        ru: 'На код-ревью смотрю на корректность и бизнес-логику, а не только на стилистику.',
+    },
+    'how-i-work__ai-title': {
+        en: 'AI in everyday work',
+        ru: 'AI в повседневной работе',
+    },
+    'how-i-work__ai-1': {
+        en: '<span class="how-i-work__tag">tools</span> Claude Code, Cursor, ChatGPT — depending on the task: refactors and routine in IDE, research / debugging in chat.',
+        ru: '<span class="how-i-work__tag">инструменты</span> Claude Code, Cursor, ChatGPT — в зависимости от задачи: рефакторинг и рутина в IDE, исследование и дебаг в чате.',
+    },
+    'how-i-work__ai-2': {
+        en: '<span class="how-i-work__tag">how</span> Treat AI as a drafting partner: boilerplate, types, tests, exploring unfamiliar APIs, parsing stack traces.',
+        ru: '<span class="how-i-work__tag">как</span> Использую AI как соавтора черновика: бойлерплейт, типы, тесты, разбор незнакомого API, парсинг стектрейсов.',
+    },
+    'how-i-work__ai-3': {
+        en: '<span class="how-i-work__tag">limits</span> Never delegate understanding — final decision and review are mine, AI output is verified by types and tests.',
+        ru: '<span class="how-i-work__tag">границы</span> Не делегирую AI понимание задачи: финальное решение и ревью — за мной, вывод AI верифицирую типами и тестами.',
+    },
+    'how-i-work__ai-4': {
+        en: '<span class="how-i-work__tag">prompts</span> Iterative prompting with explicit input, output and constraints; small step, check, refine.',
+        ru: '<span class="how-i-work__tag">промпты</span> Промптинг итеративный: явные вход, выход и ограничения; маленький шаг — проверка — уточнение.',
+    },
+    'how-i-work__ai-5': {
+        en: '<span class="how-i-work__tag">legacy</span> On legacy code AI helps to quickly map the architecture and produce the first diff for review.',
+        ru: '<span class="how-i-work__tag">легаси</span> На легаси AI помогает быстро картографировать архитектуру и собрать первый diff под ревью.',
     },
 }
 
