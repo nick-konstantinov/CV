@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link type="image/x-icon" href="icons/favicon.ico" rel="shortcut icon" />
     <link rel="stylesheet" href="styles/styles.css" />
+    <script defer src="js/config.js"></script>
     <script defer src="js/lang.js"></script>
     <script defer src="js/download-menu.js"></script>
     <script defer src="js/tilt.js"></script>
+    <script defer src="js/contact-form.js"></script>
     <title>CV Mikita Kanstantsinau</title>
   </head>
   <!-- Google tag (gtag.js) -->
@@ -45,6 +47,17 @@
             Frontend Developer
           </h4>
         </div>
+        <button
+          type="button"
+          class="header__cta"
+          data-contact-open
+          data-lang-group="group"
+          data-lang="contact-form__cta"
+          aria-haspopup="dialog"
+          aria-controls="contact-modal"
+        >
+          Write to me
+        </button>
         <nav class="lang-menu">
           <button class="lang-menu__btn" type="button" data-btn="en">En</button>
           <button class="lang-menu__btn" type="button" data-btn="ru">Ru</button>
@@ -826,6 +839,130 @@
           </article>
         </section>
       </main>
+
+      <!-- Contact form modal -->
+      <dialog
+        class="contact-modal"
+        id="contact-modal"
+        data-contact-modal
+        data-lang-group="group"
+        aria-labelledby="contact-modal-title"
+      >
+        <div class="contact-modal__inner">
+          <button
+            type="button"
+            class="contact-modal__close"
+            data-contact-close
+            aria-label="Close"
+            data-lang-attr-aria-label="contact-form__close"
+          >
+            &times;
+          </button>
+
+          <h3
+            class="contact-modal__title"
+            id="contact-modal-title"
+            data-lang="contact-form__title"
+          >
+            Get in touch
+          </h3>
+          <p class="contact-modal__subtitle" data-lang="contact-form__subtitle">
+            Drop me a message and I will reply by email. You will also receive a copy of your message for your records.
+          </p>
+
+          <form class="contact-form__form" data-contact-form novalidate>
+            <div class="contact-form__honeypot" aria-hidden="true">
+              <label>
+                Do not fill this in
+                <input type="text" name="website" tabindex="-1" autocomplete="off" />
+              </label>
+            </div>
+
+            <div class="contact-form__row">
+              <div class="contact-form__field" data-contact-field="name">
+                <label class="contact-form__label" for="cf-name" data-lang="contact-form__name-label">
+                  Name
+                </label>
+                <input
+                  class="contact-form__input"
+                  id="cf-name"
+                  name="name"
+                  type="text"
+                  required
+                  minlength="2"
+                  autocomplete="name"
+                  placeholder="Your name"
+                  data-lang-attr-placeholder="contact-form__name-placeholder"
+                  aria-required="true"
+                />
+                <p class="contact-form__error" data-contact-error aria-live="polite"></p>
+              </div>
+
+              <div class="contact-form__field" data-contact-field="phone">
+                <label class="contact-form__label" for="cf-phone" data-lang="contact-form__phone-label">
+                  Phone
+                </label>
+                <input
+                  class="contact-form__input"
+                  id="cf-phone"
+                  name="phone"
+                  type="tel"
+                  required
+                  autocomplete="tel"
+                  placeholder="+375 ..."
+                  data-lang-attr-placeholder="contact-form__phone-placeholder"
+                  aria-required="true"
+                />
+                <p class="contact-form__error" data-contact-error aria-live="polite"></p>
+              </div>
+            </div>
+
+            <div class="contact-form__field" data-contact-field="email">
+              <label class="contact-form__label" for="cf-email" data-lang="contact-form__email-label">
+                Email
+              </label>
+              <input
+                class="contact-form__input"
+                id="cf-email"
+                name="email"
+                type="email"
+                required
+                autocomplete="email"
+                placeholder="you@example.com"
+                data-lang-attr-placeholder="contact-form__email-placeholder"
+                aria-required="true"
+              />
+              <p class="contact-form__error" data-contact-error aria-live="polite"></p>
+            </div>
+
+            <div class="contact-form__field" data-contact-field="message">
+              <label class="contact-form__label" for="cf-message" data-lang="contact-form__message-label">
+                Message
+              </label>
+              <textarea
+                class="contact-form__input contact-form__textarea"
+                id="cf-message"
+                name="message"
+                required
+                minlength="5"
+                rows="5"
+                placeholder="Tell me a bit about the project, role or question..."
+                data-lang-attr-placeholder="contact-form__message-placeholder"
+                aria-required="true"
+              ></textarea>
+              <p class="contact-form__error" data-contact-error aria-live="polite"></p>
+            </div>
+
+            <div class="contact-form__actions">
+              <button class="contact-form__submit" type="submit" data-contact-submit>
+                <span class="contact-form__submit-label" data-lang="contact-form__submit">Send message</span>
+                <span class="contact-form__submit-spinner" aria-hidden="true"></span>
+              </button>
+              <p class="contact-form__status" data-contact-status role="status" aria-live="polite"></p>
+            </div>
+          </form>
+        </div>
+      </dialog>
 
       <!-- Footer -->
       <footer class="footer"><span hidden>Footer</span></footer>
