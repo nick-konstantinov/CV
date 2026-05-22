@@ -10,6 +10,7 @@
     <script defer src="js/download-menu.js"></script>
     <script defer src="js/tilt.js"></script>
     <script defer src="js/contact-form.js"></script>
+    <script defer src="js/ai-chat.js"></script>
     <title>CV Mikita Kanstantsinau</title>
   </head>
   <!-- Google tag (gtag.js) -->
@@ -966,6 +967,72 @@
 
       <!-- Footer -->
       <footer class="footer"><span hidden>Footer</span></footer>
+
+      <!-- AI chat widget -->
+      <button
+        type="button"
+        class="ai-chat__launcher"
+        data-ai-launcher
+        aria-label="Open AI assistant"
+        data-lang-attr-aria-label="ai-chat__launcher-aria"
+        aria-expanded="false"
+      >
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 4h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H8l-4 4V6a2 2 0 0 1 2-2zm3 6h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z"/>
+        </svg>
+      </button>
+
+      <section
+        class="ai-chat__panel"
+        data-ai-panel
+        data-lang-group="group"
+        role="dialog"
+        aria-label="AI assistant"
+        aria-modal="false"
+      >
+        <header class="ai-chat__header">
+          <span class="ai-chat__avatar" aria-hidden="true">AI</span>
+          <div class="ai-chat__title-group">
+            <span class="ai-chat__title" data-lang="ai-chat__title">CV Assistant</span>
+            <span class="ai-chat__subtitle" data-lang="ai-chat__subtitle">Ask about Nick's experience</span>
+          </div>
+          <button
+            type="button"
+            class="ai-chat__close"
+            data-ai-close
+            aria-label="Close"
+            data-lang-attr-aria-label="ai-chat__close-aria"
+          >&times;</button>
+        </header>
+
+        <div class="ai-chat__messages" data-ai-messages role="log" aria-live="polite"></div>
+
+        <div class="ai-chat__suggestions" data-ai-suggestions></div>
+
+        <form class="ai-chat__form" data-ai-form>
+          <label class="visually-hidden" for="ai-chat-input" data-lang="ai-chat__input-label">Message</label>
+          <input
+            class="ai-chat__input"
+            id="ai-chat-input"
+            data-ai-input
+            type="text"
+            autocomplete="off"
+            placeholder="Ask anything..."
+            data-lang-attr-placeholder="ai-chat__input-placeholder"
+          />
+          <button
+            type="submit"
+            class="ai-chat__send"
+            data-ai-send
+            aria-label="Send"
+            data-lang-attr-aria-label="ai-chat__send-aria"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M3.4 20.4l17.45-7.48a1 1 0 0 0 0-1.84L3.4 3.6a1 1 0 0 0-1.39 1.14L4 11l9 1-9 1-1.99 6.26a1 1 0 0 0 1.39 1.14z"/>
+            </svg>
+          </button>
+        </form>
+      </section>
     </div>
   </body>
 </html>

@@ -534,6 +534,58 @@ const mainPageText = {
     en: 'Message should be at least 5 characters.',
     ru: 'Сообщение должно содержать не менее 5 символов.',
   },
+  'ai-chat__launcher-aria': {
+    en: 'Open AI assistant',
+    ru: 'Открыть AI-помощника',
+  },
+  'ai-chat__close-aria': {
+    en: 'Close',
+    ru: 'Закрыть',
+  },
+  'ai-chat__send-aria': {
+    en: 'Send',
+    ru: 'Отправить',
+  },
+  'ai-chat__title': {
+    en: 'CV Assistant',
+    ru: 'CV-помощник',
+  },
+  'ai-chat__subtitle': {
+    en: "Ask about Nick's experience",
+    ru: 'Спросите об опыте Никиты',
+  },
+  'ai-chat__input-label': {
+    en: 'Message',
+    ru: 'Сообщение',
+  },
+  'ai-chat__input-placeholder': {
+    en: 'Ask anything...',
+    ru: 'Спросите что угодно...',
+  },
+  'ai-chat__greeting': {
+    en: "Hi! I am a small AI assistant trained on Nick's CV. Ask me about his experience, stack or how to get in touch.",
+    ru: 'Привет! Я небольшой AI-помощник, обученный на резюме Никиты. Спросите об опыте, стеке или о том, как со мной связаться.',
+  },
+  'ai-chat__suggestion-stack': {
+    en: 'What is the main stack?',
+    ru: 'Какой основной стек?',
+  },
+  'ai-chat__suggestion-experience': {
+    en: 'Tell me about recent experience',
+    ru: 'Расскажи про последний опыт',
+  },
+  'ai-chat__suggestion-contact': {
+    en: 'How can I get in touch?',
+    ru: 'Как с ним связаться?',
+  },
+  'ai-chat__typing': {
+    en: 'Assistant is typing',
+    ru: 'Помощник печатает',
+  },
+  'ai-chat__error': {
+    en: 'Sorry, I could not reply this time. Please try again or use the contact form.',
+    ru: 'Не получилось ответить. Попробуйте ещё раз или воспользуйтесь формой обратной связи.',
+  },
 };
 
 window.mainPageText = mainPageText;
