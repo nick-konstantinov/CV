@@ -1,8 +1,5 @@
 (function () {
-  // Paste your deployed backend URL here (e.g. Render: https://cv-xxxxx.onrender.com).
-  // Same-origin hosts (localhost, the backend domain itself) keep apiBase
-  // empty and use relative paths.
-  const API_URL = 'https://YOUR-PROJECT.onrender.com';
+  const API_URL = 'https://cv-backend-srac.onrender.com';
 
   const PLACEHOLDER = 'https://YOUR-PROJECT.onrender.com';
 
