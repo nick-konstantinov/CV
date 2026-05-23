@@ -1,34 +1,40 @@
-const nodemailer = require('nodemailer');
 const { applyCors } = require('./_lib/cors');
 const { validateContact, escapeHtml } = require('./_lib/validate');
 
-let cachedTransport;
+const BREVO_URL = 'https://api.brevo.com/v3/smtp/email';
 
-function getTransport() {
-  if (cachedTransport) return cachedTransport;
-
-  const user = process.env.GMAIL_USER;
-  const pass = process.env.GMAIL_APP_PASSWORD;
-
-  if (!user || !pass) {
-    throw new Error('GMAIL_USER and GMAIL_APP_PASSWORD env vars are required');
+async function sendViaBrevo({ from, to, replyTo, subject, html, text }) {
+  const apiKey = process.env.BREVO_API_KEY;
+  if (!apiKey) {
+    const err = new Error('BREVO_API_KEY is not set');
+    err.code = 'mail-not-configured';
+    throw err;
   }
 
-  cachedTransport = nodemailer.createTransport({
-    host: 'smtp.gmail.com',
-    port: 587,
-    secure: false,
-    requireTLS: true,
-    pool: true,
-    maxConnections: 3,
-    maxMessages: 50,
-    connectionTimeout: 10000,
-    greetingTimeout: 10000,
-    socketTimeout: 20000,
-    family: 4,
-    auth: { user, pass: pass.replace(/\s+/g, '') },
+  const res = await fetch(BREVO_URL, {
+    method: 'POST',
+    headers: {
+      accept: 'application/json',
+      'content-type': 'application/json',
+      'api-key': apiKey,
+    },
+    body: JSON.stringify({
+      sender: from,
+      to: [to],
+      replyTo,
+      subject,
+      htmlContent: html,
+      textContent: text,
+    }),
   });
-  return cachedTransport;
+
+  if (!res.ok) {
+    const body = await res.text();
+    const err = new Error(`Brevo ${res.status}: ${body}`);
+    err.code = 'mail-upstream';
+    throw err;
+  }
+  return res.json();
 }
 
 function ownerHtml({ name, phone, email, message }) {
@@ -115,31 +121,31 @@ module.exports = async function handler(req, res) {
 
   const { name, phone, email, message } = validation.data;
 
-  let transport;
-  try {
-    transport = getTransport();
-  } catch (err) {
-    console.error('mail config error', err);
+  const senderEmail = process.env.MAIL_SENDER_EMAIL;
+  const senderName = process.env.MAIL_SENDER_NAME || 'CV Contact Form';
+  const ownerEmail = process.env.MAIL_OWNER || senderEmail;
+
+  if (!senderEmail) {
+    console.error('mail config error: MAIL_SENDER_EMAIL is not set');
     return res.status(500).json({ error: 'mail-not-configured' });
   }
 
-  const fromAddress = `"CV Contact Form" <${process.env.GMAIL_USER}>`;
-  const ownerEmail = process.env.MAIL_OWNER || process.env.GMAIL_USER;
+  const from = { email: senderEmail, name: senderName };
 
   try {
-    await transport.sendMail({
-      from: fromAddress,
-      to: ownerEmail,
-      replyTo: email,
+    await sendViaBrevo({
+      from,
+      to: { email: ownerEmail, name: 'CV Owner' },
+      replyTo: { email, name },
       subject: `New message from CV form — ${name}`,
       html: ownerHtml({ name, phone, email, message }),
       text: ownerText({ name, phone, email, message }),
     });
 
-    await transport.sendMail({
-      from: fromAddress,
-      to: email,
-      replyTo: ownerEmail,
+    await sendViaBrevo({
+      from,
+      to: { email, name },
+      replyTo: { email: ownerEmail, name: 'Nick Konstantinov' },
       subject: 'Copy of your message to Nick Konstantinov',
       html: userHtml({ name, phone, email, message }),
       text: userText({ name, phone, email, message }),
@@ -148,6 +154,7 @@ module.exports = async function handler(req, res) {
     return res.status(200).json({ ok: true });
   } catch (err) {
     console.error('mail send error', err && err.message ? err.message : err);
-    return res.status(502).json({ error: 'mail-failed' });
+    const code = err && err.code === 'mail-not-configured' ? 500 : 502;
+    return res.status(code).json({ error: err && err.code ? err.code : 'mail-failed' });
   }
 };
