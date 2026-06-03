@@ -246,6 +246,42 @@ const mainPageText = {
     en: 'Work experience',
     ru: 'Опыт работы',
   },
+  'exp__speciality-name-sb': {
+    en: 'ShareBook – Front-end Developer',
+    ru: 'ShareBook – Front-end разработчик',
+  },
+  'exp__text-sb-end-time': {
+    en: 'Present',
+    ru: 'по н.в.',
+  },
+  'exp__text-sb-description': {
+    en: 'Book-sharing (bookcrossing) platform for exchanging and giving away books',
+    ru: 'Платформа для обмена книгами (буккроссинг): обмен и безвозмездная отдача книг',
+  },
+  'exp__text-sb-tech-stack': {
+    en: 'Next.js, React, TypeScript, Redux Toolkit, RTK Query, SCSS Modules, next-intl, MSW, Zod, SVGR, Feature-Sliced Design',
+    ru: 'Next.js, React, TypeScript, Redux Toolkit, RTK Query, SCSS Modules, next-intl, MSW, Zod, SVGR, Feature-Sliced Design',
+  },
+  'exp__text-sb-team': {
+    en: '6 members',
+    ru: '6 человек',
+  },
+  'exp__text-sb-goal-1': {
+    en: 'Migrated profile pages to Next.js Server Components integrated with the real backend.',
+    ru: 'Перенёс страницы профиля на Next.js Server Components с интеграцией реального бэкенда.',
+  },
+  'exp__text-sb-goal-2': {
+    en: 'Built reusable widgets (book feed with grid and loading/error/empty states, profile header) following Feature-Sliced Design.',
+    ru: 'Разработал переиспользуемые виджеты (лента книг с грид-версткой и состояниями загрузки/ошибки/пустоты, шапка профиля) по методологии Feature-Sliced Design.',
+  },
+  'exp__text-sb-goal-3': {
+    en: 'Implemented data fetching with RTK Query and MSW mocks, and extracted shared utilities.',
+    ru: 'Реализовал загрузку данных через RTK Query и моки MSW, вынес общие утилиты.',
+  },
+  'exp__text-sb-goal-4': {
+    en: 'Replaced third-party normalize/adaptive libraries with custom SCSS solutions.',
+    ru: 'Заменил сторонние normalize/adaptive-библиотеки собственными SCSS-решениями.',
+  },
   'exp__speciality-name-cf': {
     en: 'CommunityTech Group – Middle Front-end developer',
     ru: 'CommunityTech Group – Middle Front-end разработчик',
