@@ -6,13 +6,13 @@ const SKILLS = [
   { key: 'typescript', label: 'TypeScript', start: '2024-06', color: '#3178c6' },
   // Frameworks
   { key: 'angular', label: 'Angular 2+', start: '2024-06', color: '#dd0031' },
+  { key: 'angular_material', label: 'Angular Material', start: '2024-06', color: '#3f51b5', icon: 'badge' },
   { key: 'react', label: 'React', start: '2025-12', color: '#61dafb' },
   { key: 'nextjs', label: 'Next.js', start: '2025-12', color: '#222222' },
   // State / data
   { key: 'rxjs', label: 'RxJS', start: '2024-06', color: '#b7178c' },
   { key: 'ngrx', label: 'NgRX', start: '2024-06', color: '#ba2bd2' },
   { key: 'redux', label: 'Redux Toolkit / RTK Query', start: '2025-12', color: '#764abc' },
-  { key: 'angular_material', label: 'Angular Material', start: '2024-06', color: '#3f51b5', icon: 'badge' },
   { key: 'zod', label: 'Zod', start: '2025-12', color: '#3e67b1' },
   // Network / API / mocks
   { key: 'websocket', label: 'WebSocket', start: '2024-06', color: '#00aaff', icon: 'badge' },
@@ -20,13 +20,22 @@ const SKILLS = [
   { key: 'msw', label: 'MSW', start: '2025-12', color: '#ff6a33' },
   // Styling / assets / i18n
   { key: 'scss', label: 'SCSS', start: '2023-01', color: '#cc6699' },
+  { key: 'tailwind', label: 'Tailwind CSS', start: '2025-12', color: '#06b6d4' },
   { key: 'svgr', label: 'SVGR', start: '2025-12', color: '#ff5722', icon: 'badge' },
   { key: 'next_intl', label: 'next-intl', start: '2025-12', color: '#14213b', icon: 'badge' },
+  // Testing
+  { key: 'vitest', label: 'Vitest', start: '2025-12', color: '#6e9f18' },
+  { key: 'jest', label: 'Jest', start: '2024-06', color: '#c21325' },
+  { key: 'rtl', label: 'React Testing Library', start: '2025-12', color: '#e33332' },
   // Tooling
   { key: 'git', label: 'Git', start: '2022-01', color: '#f05032' },
+  { key: 'vite', label: 'Vite', start: '2025-12', color: '#646cff' },
   { key: 'webpack', label: 'Webpack', start: '2024-06', color: '#8dd6f9' },
   { key: 'npm', label: 'Npm', start: '2024-06', color: '#cb3837' },
   { key: 'gitlab', label: 'GitLab CI/CD', start: '2024-06', color: '#fc6d26' },
+  // Quality
+  { key: 'a11y', label: 'Accessibility (a11y)', start: '2024-06', color: '#2a7fff', icon: 'badge' },
+  { key: 'web_performance', label: 'Web Performance', start: '2024-06', color: '#ff9800', icon: 'badge' },
   // Design
   { key: 'figma', label: 'Figma', start: '2022-03', color: '#f24e1e' },
   { key: 'photoshop', label: 'Photoshop', start: '2022-03', color: '#31a8ff', icon: 'badge' },
