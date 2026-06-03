@@ -6,3 +6,6 @@ node_modules/
 .DS_Store
 .idea/
 .claude/
+
+# Sass source maps (build uses --no-source-map)
+src/styles/styles.css.map
