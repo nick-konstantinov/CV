@@ -104,12 +104,17 @@
             }
 
             &--address::after {
-                top: 0.2rem;
-                right: 2rem;
+                position: static;
+                display: inline-block;
+                vertical-align: middle;
+                margin-left: 0.6rem;
                 background: url('../icons/flag-belarus.svg') no-repeat;
 
                 @include desktop {
+                    position: absolute;
                     top: 0;
+                    left: 0;
+                    margin-left: 0;
                 }
             }
 

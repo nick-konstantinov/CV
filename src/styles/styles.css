@@ -784,13 +784,18 @@ p {
   opacity: 1;
 }
 .contacts__item-text--address::after {
-  top: 0.2rem;
-  right: 2rem;
+  position: static;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0.6rem;
   background: url("../icons/flag-belarus.svg") no-repeat;
 }
 @media (max-width: 1200px) {
   .contacts__item-text--address::after {
+    position: absolute;
     top: 0;
+    left: 0;
+    margin-left: 0;
   }
 }
 .contacts__item-text--email::after {
