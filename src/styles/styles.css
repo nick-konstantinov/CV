@@ -852,6 +852,8 @@ p {
 }
 .skills__item {
   position: relative;
+  display: inline-flex;
+  align-items: center;
   list-style: none;
   min-height: 2.6rem;
   padding-top: 0.4rem;
@@ -895,95 +897,45 @@ p {
   z-index: 1;
   pointer-events: none;
 }
-.skills__item:hover {
+.skills__item-icon {
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+  width: 0;
+  height: 1.6rem;
+  object-fit: contain;
+  opacity: 0;
+  overflow: hidden;
+  pointer-events: none;
+  transition: width 0.25s ease, margin-right 0.25s ease, opacity 0.25s ease;
+}
+.skills__item-years {
+  position: relative;
+  z-index: 1;
+  max-width: 0;
+  overflow: hidden;
+  color: var(--color-gray);
+  font-size: 1.2rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: max-width 0.3s ease, margin-left 0.25s ease, opacity 0.25s ease;
+}
+.skills__item--active {
   padding-inline: 1.2rem;
 }
-.skills__item:hover .skills__item-bg {
+.skills__item--active .skills__item-bg {
   opacity: 1;
 }
-.skills .skill--html {
-  --skill-from: rgba(227, 79, 38, 0.45);
-  --skill-to: rgba(255, 138, 101, 0.2);
+.skills__item--active .skills__item-icon {
+  width: 1.6rem;
+  margin-right: 0.4rem;
+  opacity: 1;
 }
-.skills .skill--css {
-  --skill-from: rgba(38, 77, 228, 0.45);
-  --skill-to: rgba(92, 124, 250, 0.2);
-}
-.skills .skill--javascript {
-  --skill-from: rgba(247, 223, 30, 0.45);
-  --skill-to: rgba(255, 241, 118, 0.2);
-}
-.skills .skill--angular {
-  --skill-from: rgba(221, 0, 49, 0.45);
-  --skill-to: rgba(255, 92, 92, 0.2);
-}
-.skills .skill--typescript {
-  --skill-from: rgba(49, 120, 198, 0.45);
-  --skill-to: rgba(108, 182, 255, 0.2);
-}
-.skills .skill--rxjs {
-  --skill-from: rgba(183, 23, 140, 0.45);
-  --skill-to: rgba(224, 93, 186, 0.2);
-}
-.skills .skill--ngrx {
-  --skill-from: rgba(202, 11, 0, 0.45);
-  --skill-to: rgba(255, 77, 77, 0.2);
-}
-.skills .skill--angular_material {
-  --skill-from: rgba(63, 81, 181, 0.45);
-  --skill-to: rgba(121, 134, 203, 0.2);
-}
-.skills .skill--websocket {
-  --skill-from: rgba(0, 170, 255, 0.45);
-  --skill-to: rgba(0, 209, 255, 0.2);
-}
-.skills .skill--git {
-  --skill-from: rgba(243, 79, 41, 0.45);
-  --skill-to: rgba(250, 117, 80, 0.2);
-}
-.skills .skill--webpack {
-  --skill-from: rgba(142, 214, 251, 0.45);
-  --skill-to: rgba(28, 120, 192, 0.2);
-}
-.skills .skill--gitlab {
-  --skill-from: rgba(252, 109, 38, 0.45);
-  --skill-to: rgba(255, 146, 72, 0.2);
-}
-.skills .skill--swagger {
-  --skill-from: rgba(133, 234, 45, 0.45);
-  --skill-to: rgba(169, 247, 42, 0.2);
-}
-.skills .skill--npm {
-  --skill-from: rgba(203, 56, 55, 0.45);
-  --skill-to: rgba(255, 92, 92, 0.2);
-}
-.skills .skill--bem {
-  --skill-from: rgba(255, 152, 0, 0.45);
-  --skill-to: rgba(255, 192, 113, 0.2);
-}
-.skills .skill--oop {
-  --skill-from: rgba(96, 125, 139, 0.45);
-  --skill-to: rgba(144, 164, 174, 0.2);
-}
-.skills .skill--solid {
-  --skill-from: rgba(0, 150, 136, 0.45);
-  --skill-to: rgba(77, 182, 172, 0.2);
-}
-.skills .skill--first {
-  --skill-from: rgba(255, 87, 34, 0.45);
-  --skill-to: rgba(255, 138, 80, 0.2);
-}
-.skills .skill--agile {
-  --skill-from: rgba(142, 214, 251, 0.45);
-  --skill-to: rgba(28, 120, 192, 0.2);
-}
-.skills .skill--figma {
-  --skill-from: rgba(242, 78, 30, 0.45);
-  --skill-to: rgba(255, 138, 101, 0.2);
-}
-.skills .skill--photoshop {
-  --skill-from: rgba(49, 168, 255, 0.45);
-  --skill-to: rgba(127, 195, 255, 0.2);
+.skills__item--active .skills__item-years {
+  max-width: 8rem;
+  margin-left: 0.4rem;
+  opacity: 1;
 }
 
 .languages {

@@ -1,6 +1,4 @@
 @use '../index' as *;
-@use 'sass:color';
-@use 'sass:list';
 
 .skills {
   --skill-from: rgba(255,255,255,.25);
@@ -20,6 +18,8 @@
 
   &__item {
     position: relative;
+    display: inline-flex;
+    align-items: center;
     list-style: none;
     min-height: 2.6rem;
     padding-top: 0.4rem;
@@ -79,19 +79,49 @@
     pointer-events: none;
   }
 
-  &__item:hover {
+  &__item-icon {
+    position: relative;
+    z-index: 1;
+    flex-shrink: 0;
+    width: 0;
+    height: 1.6rem;
+    object-fit: contain;
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
+    transition: width 0.25s ease, margin-right 0.25s ease, opacity 0.25s ease;
+  }
+
+  &__item-years {
+    position: relative;
+    z-index: 1;
+    max-width: 0;
+    overflow: hidden;
+    color: var(--color-gray);
+    font-size: 1.2rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: max-width 0.3s ease, margin-left 0.25s ease, opacity 0.25s ease;
+  }
+
+  &__item--active {
     padding-inline: 1.2rem;
   }
 
-  &__item:hover &__item-bg {
+  &__item--active &__item-bg {
     opacity: 1;
   }
 
-
- @each $name, $colors in $skills {
-  .skill--#{$name} {
-    --skill-from: #{color.change(list.nth($colors, 1), $alpha: 0.45)};
-    --skill-to: #{color.change(list.nth($colors, 2), $alpha: 0.2)};
+  &__item--active &__item-icon {
+    width: 1.6rem;
+    margin-right: 0.4rem;
+    opacity: 1;
   }
-}
+
+  &__item--active &__item-years {
+    max-width: 8rem;
+    margin-left: 0.4rem;
+    opacity: 1;
+  }
 }

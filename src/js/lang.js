@@ -626,29 +626,13 @@ const mainPageText = {
 
 window.mainPageText = mainPageText;
 
-const EXPERIENCE_START = '2023-12'; // YYYY-MM
-
-function getExperienceValue(start = EXPERIENCE_START) {
-  const [year, month] = start.split('-').map(Number);
-  const now = new Date();
-  const months = Math.max(0, (now.getFullYear() - year) * 12 + (now.getMonth() + 1 - month));
-  return Math.floor(months / 6) / 2;
-}
-
-function pluralYearsRu(value) {
-  if (!Number.isInteger(value)) return 'года';
-  if (value % 100 >= 11 && value % 100 <= 14) return 'лет';
-  const last = value % 10;
-  if (last === 1) return 'год';
-  if (last >= 2 && last <= 4) return 'года';
-  return 'лет';
-}
-
+// Append the commercial-experience counter to the work-experience title.
+// getExperienceValue / formatExperienceLong come from experience.js.
 (function appendExperienceToTitle() {
-  const value = getExperienceValue();
+  const value = getExperienceValue('2023-12');
   const title = mainPageText['detailed-title-work-exp'];
-  title.en = `Work experience (${value}+ years)`;
-  title.ru = `Опыт работы (${value}+ ${pluralYearsRu(value)})`;
+  title.en = `Work experience (${formatExperienceLong(value, 'en')})`;
+  title.ru = `Опыт работы (${formatExperienceLong(value, 'ru')})`;
 })();
 
 function changeLangAnimatedGrouped() {
