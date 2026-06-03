@@ -798,6 +798,11 @@ p {
     margin-left: 0;
   }
 }
+@media (max-width: 1000px) {
+  .contacts__item-text--address::after {
+    display: none;
+  }
+}
 .contacts__item-text--email::after {
   top: 1rem;
   right: -1.2rem;
@@ -1911,3 +1916,5 @@ p {
   transform: translateY(6px);
   filter: blur(4px);
 }
+
+/*# sourceMappingURL=styles.css.map */

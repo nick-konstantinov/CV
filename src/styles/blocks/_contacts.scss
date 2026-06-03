@@ -116,6 +116,10 @@
                     left: 0;
                     margin-left: 0;
                 }
+
+                @include laptop {
+                  display: none;
+                }
             }
 
             &--email::after {
