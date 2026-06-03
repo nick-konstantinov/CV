@@ -1,3 +1,5 @@
+@use '../index' as *;
+
 $ai-chat-edge: max(0.5rem, calc((100vw - 1100px) / 2 + 0.5rem));
 
 .ai-chat {

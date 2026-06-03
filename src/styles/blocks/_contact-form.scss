@@ -1,3 +1,5 @@
+@use '../index' as *;
+
 .contact-modal {
   width: min(56rem, calc(100vw - 4rem));
   max-width: 56rem;

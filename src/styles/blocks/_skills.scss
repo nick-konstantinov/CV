@@ -1,4 +1,6 @@
-@use "../skills.tokens" as *;
+@use '../index' as *;
+@use 'sass:color';
+@use 'sass:list';
 
 .skills {
   --skill-from: rgba(255,255,255,.25);
@@ -88,8 +90,8 @@
 
  @each $name, $colors in $skills {
   .skill--#{$name} {
-    --skill-from: #{rgba(nth($colors, 1), 0.45)};
-    --skill-to: #{rgba(nth($colors, 2), 0.2)};
+    --skill-from: #{color.change(list.nth($colors, 1), $alpha: 0.45)};
+    --skill-to: #{color.change(list.nth($colors, 2), $alpha: 0.2)};
   }
 }
 }
