@@ -790,7 +790,7 @@ p {
 }
 @media (max-width: 1200px) {
   .contacts__item-text--address::after {
-    top: 0rem;
+    top: 0;
   }
 }
 .contacts__item-text--email::after {
@@ -1015,7 +1015,7 @@ p {
 }
 @media (max-width: 1000px) {
   .languages__item:last-child {
-    margin-top: 0rem;
+    margin-top: 0;
   }
 }
 .languages__img {
