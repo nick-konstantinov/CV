@@ -785,7 +785,7 @@ p {
 }
 .contacts__item-text--address::after {
   top: 0.2rem;
-  right: 4.2rem;
+  right: 2rem;
   background: url("../icons/flag-belarus.svg") no-repeat;
 }
 @media (max-width: 1200px) {

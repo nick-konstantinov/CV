@@ -607,6 +607,7 @@ function changeLangAnimatedGrouped() {
       setTimeout(() => {
         el.innerHTML = mainPageText[key][currentLang];
         el.classList.remove('lang-hide');
+        setTimeout(() => el.classList.remove('lang-animate'), 300);
       }, 80 + index * 40);
     });
   });
