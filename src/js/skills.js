@@ -40,8 +40,8 @@ const SKILLS = [
   { key: 'figma', label: 'Figma', start: '2022-03', color: '#f24e1e' },
   { key: 'photoshop', label: 'Photoshop', start: '2022-03', color: '#31a8ff', icon: 'badge' },
   // AI tools
-  { key: 'claude', label: 'Claude', start: '2024-06', color: '#d97757' },
-  { key: 'cursor', label: 'Cursor', start: '2024-09', color: '#444444' },
+  { key: 'claude', label: 'Claude', start: '2025-06', color: '#d97757' },
+  { key: 'cursor', label: 'Cursor', start: '2025-06', color: '#444444' },
   // Principles / methodologies
   { key: 'bem', label: 'BEM', start: '2022-03', color: '#ff9800', icon: 'badge' },
   { key: 'oop', label: 'OOP', start: '2023-01', color: '#607d8b', icon: 'badge' },
