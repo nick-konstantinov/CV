@@ -507,8 +507,8 @@ const mainPageText = {
     ru: 'Свяжитесь со мной',
   },
   'contact-form__subtitle': {
-    en: 'Drop me a message and I will reply by email. You will also receive a copy of your message for your records.',
-    ru: 'Напишите сообщение — отвечу на указанный email, а копию письма с вашим обращением вы получите себе.',
+    en: 'Drop me a message and I will reply by email.',
+    ru: 'Напишите сообщение — отвечу на указанный email.',
   },
   'contact-form__name-label': {
     en: 'Name',
@@ -535,8 +535,8 @@ const mainPageText = {
     ru: 'Отправляем…',
   },
   'contact-form__status-success': {
-    en: 'Message sent. A copy is on its way to your inbox.',
-    ru: 'Сообщение отправлено. Копия письма уже летит на вашу почту.',
+    en: 'Message sent. I will reply by email shortly.',
+    ru: 'Сообщение отправлено. Скоро отвечу на ваш email.',
   },
   'contact-form__status-error': {
     en: 'Could not send the message. Please try again or email me directly.',

@@ -90,14 +90,14 @@
       en: {
         stack: 'Main stack: Angular 2+, TypeScript, RxJS, NgRX, Angular Material, SCSS, REST + Swagger, Webpack, GitLab CI/CD. Comfortable with Agile (Scrum, Kanban).',
         experience: 'Middle Front-end at CommunityTech Group since 06.2024 — 14-person team, 40+ delivered features, 80+ fixed bugs, 9 client UI customizations, ~20% perf gain through lazy-loading, monorepo migration. Before that — freelance, full-stack landing pages (HTML/CSS/JS/PHP).',
-        contact: 'Easiest way — the "Write to me" button in the top-right corner: it opens a form, you will get a copy of your message and Nick will reply on email. Telegram and email are also in the Contacts block.',
+        contact: 'Easiest way — the "Write to me" button in the top-right corner: it opens a form and Nick will reply on email. Telegram and email are also in the Contacts block.',
         ai: 'Nick uses Claude Code, Cursor and ChatGPT as a drafting partner: routine, types, tests, exploring unfamiliar APIs, parsing stack traces. He never delegates understanding — final decision is his and AI output is verified by types and tests.',
         default: "I'm running in offline-demo mode for now — once the backend is wired up I'll be able to give richer answers. Try asking about stack, experience or how to get in touch.",
       },
       ru: {
         stack: 'Основной стек: Angular 2+, TypeScript, RxJS, NgRX, Angular Material, SCSS, REST + Swagger, Webpack, GitLab CI/CD. Уверенно в Agile (Scrum, Kanban).',
         experience: 'Middle Front-end в CommunityTech Group с 06.2024 — команда 14 человек, 40+ выкаченных фич, 80+ исправленных багов, 9 кастомизаций UI под клиентов, ~20% ускорение через lazy-loading, миграция в монорепозиторий. До этого — фриланс и лендинги (HTML/CSS/JS/PHP).',
-        contact: 'Проще всего — кнопкой «Написать мне» в правом верхнем углу: откроется форма, копия письма прилетит вам, Никита ответит на email. Telegram и почта есть в блоке «Контакты».',
+        contact: 'Проще всего — кнопкой «Написать мне» в правом верхнем углу: откроется форма, Никита ответит на email. Telegram и почта есть в блоке «Контакты».',
         ai: 'Никита использует Claude Code, Cursor и ChatGPT как соавтора черновика: рутина, типы, тесты, разбор незнакомого API и стектрейсов. Понимание задачи AI не делегируется — финальное решение и ревью за человеком, ответы AI верифицируются типами и тестами.',
         default: 'Сейчас работаю в офлайн-демо режиме — после подключения бэкенда смогу отвечать содержательнее. Попробуйте спросить про стек, опыт или как связаться.',
       },

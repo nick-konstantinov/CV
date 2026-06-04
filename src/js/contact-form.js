@@ -219,7 +219,7 @@
         input.setAttribute('aria-invalid', 'false');
         wrapper.querySelector('[data-contact-error]').textContent = '';
       });
-      setStatus('success', 'contact-form__status-success', 'Message sent. A copy is on its way to your inbox.');
+      setStatus('success', 'contact-form__status-success', 'Message sent. I will reply by email shortly.');
     } catch (err) {
       setStatus('error', 'contact-form__status-error', 'Could not send the message. Please try again or email me directly.');
     } finally {

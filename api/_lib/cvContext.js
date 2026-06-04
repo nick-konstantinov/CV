@@ -77,7 +77,7 @@ AI IN HIS WORK:
 CONTACT FORM:
   This CV has a built-in contact form (button "Write to me / Написать мне"
   in the top-right of the page). It opens a modal and sends an email to
-  Nick + a copy to the visitor. If a user wants to get in touch, the
+  Nick. If a user wants to get in touch, the
   preferred path is to call the tool 'open_contact_form'.
 `.trim();
 
