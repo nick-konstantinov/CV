@@ -1,8 +1,8 @@
 # CV — Mikita Kanstantsinau (Nick Konstantinov)
 
-Личное CV / портфолио и небольшое тестовое поверх него: статический лендинг о себе как разработчике с двуязычным интерфейсом, контактной формой (письмо автору + копия пользователю) и плавающим AI-чат-виджетом по CV.
+Личное CV / портфолио: статический лендинг о себе как разработчике с двуязычным интерфейсом, контактной формой (письмо автору) и плавающим AI-чат-виджетом по CV.
 
-**Демо:** [nick-konstantinov.github.io/CV/src/index.html](https://nick-konstantinov.github.io/CV/src/index.html)
+**Демо:** [nick-konstantinov.github.io/CV/](https://nick-konstantinov.github.io/CV/)
 
 ---
 
@@ -20,7 +20,7 @@
 ### Backend (Node.js Web Service, Render)
 - `local-server.js` — Express, раздаёт `src/` и подключает обработчики; один и тот же сервер используется и локально (`npm run dev:local`), и на Render (`npm start`)
 - `api/contact.js` — отправка писем через **Brevo HTTP API**
-  (`/v3/smtp/email`); два письма за один POST — автору и копия пользователю
+  (`/v3/smtp/email`); одно письмо за POST — автору
 - `api/chat.js` — прокси к **Groq API** (`llama-3.3-70b-versatile`), системный промпт с CV-контекстом + tool `open_contact_form`, который модель может вызвать, если пользователь явно хочет связаться
 - `api/_lib/cors.js` — CORS-allowlist (GH Pages + localhost + сам Render)
 - `api/_lib/validate.js` — серверная валидация полей и HTML-escape
