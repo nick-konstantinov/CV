@@ -139,8 +139,8 @@ const mainPageText = {
     ru: 'Профиль',
   },
   'profile-text': {
-    en: 'Angular developer with experience in building user interfaces, admin panels, and customized web platforms. Participate in planning, requirement refinement, and cross-team collaboration. Represent the frontend team in daily stand-ups and take part in releases and code reviews.',
-    ru: 'Angular-разработчик с опытом создания интерфейсов, админ-панелей и кастомизации веб-платформ. Участвую в планировании, проработке требований и взаимодействии между командами. Представляю фронтенд на дейликах, участвую в релизах и код-ревью.',
+    en: 'Front-end developer with experience in building user interfaces, admin panels, and customized web platforms. Participate in planning, requirement refinement, and cross-team collaboration. Represent the frontend team in daily stand-ups and take part in releases and code reviews.',
+    ru: 'Front-end разработчик с опытом создания интерфейсов, админ-панелей и кастомизации веб-платформ. Участвую в планировании, проработке требований и взаимодействии между командами. Представляю фронтенд на дейликах, участвую в релизах и код-ревью.',
   },
   'detailed-title-key-achievements': {
     en: 'Key achievements',
